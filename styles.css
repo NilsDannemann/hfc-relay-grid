@@ -14,19 +14,33 @@
 
 .box {
   background: red !important;
-  width: calc(99.9% * (1/3));
+  width: calc(99.9% * (1/6) - (5px - 5px * (1/6)));
   background: rgba(0, 0, 0, 0.15);
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .box::before {
-  content: "str, fr: 1/3";
+  content: "str, fr: 1/6";
 }
 
 .box:nth-child(1n) {
   float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
   clear: none;
+}
+
+.box:last-child {
+  margin-right: 0;
+}
+
+.box:nth-child(6n) {
+  margin-right: 0;
+}
+
+.box:nth-child(6n + 1) {
+  clear: both;
 }
 
 /*# sourceMappingURL=styles.css.map */

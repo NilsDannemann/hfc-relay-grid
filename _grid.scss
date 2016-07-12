@@ -12,7 +12,7 @@
   //    - No Gutters px               (done)
   //    - No Gutters auto
   //    - Gutters fraction            (done)
-  //    - Gutters px                  ()           
+  //    - Gutters px                  (done)           
   //    - Gutters auto
   // - If Number: use numbers
   //    - No Gutters fraction         (done)     
@@ -40,6 +40,8 @@
     }
     // If string is a value...
     @else {
+      $nominator: null;
+      $denominator: null;
       //...just convert value to number.
       $fraction-result: _str-to-number($fraction);
     } 
@@ -52,12 +54,13 @@
 
 
   //=====================================*/
-  // Important
+  // CHECK FOR IMPORTANT
   //=====================================*/
   @if ($important == true) {
     $important: !important;
   }
   
+
 
   //=====================================*/
   //
@@ -128,7 +131,6 @@
       }
       &:nth-child(#{$denominator}n) {
         margin-right: 0;
-        float: right;
       }
       &:nth-child(#{$denominator}n + 1) {
         clear: both;
@@ -138,10 +140,31 @@
     // PX, EM, %
     //*===================================*/
     @if ($fraction != null and $fraction-result > 1) {
+      
+      // Check for $cylce variable
+      @if ($cycle != null) {
+        $denominator: $cycle;
+      }
+
       width: #{$fraction} $important;
+      
       &:nth-child(1n) {
         float: left;
+        margin-right: $gutter;
+        margin-bottom: $gutter;
         clear: none;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      // Check for $denominator
+      @if ($denominator != null) {
+        &:nth-child(#{$denominator}n) {
+          margin-right: 0;
+        }
+        &:nth-child(#{$denominator}n + 1) {
+          clear: both;
+        }
       }
     }
     //===================================*/
