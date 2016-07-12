@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+/* =======================================*/
+/*
+/* GRID
+/*
+/* =======================================*/
+.grid {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.box {
+  background: red !important;
+  width: calc(99.9% * (1/3));
+  background: rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.box::before {
+  content: "str, fr: 1/3";
+}
+
+.box:nth-child(1n) {
+  float: left;
+  clear: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

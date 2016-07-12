@@ -1,0 +1,169 @@
+/* =======================================*/
+/*
+/* GRID
+/*
+/* =======================================*/
+@mixin column($fraction: null, $cycle: null, $gutter: null, $behavior: null, $important: null) {
+
+  // TODO:
+  // - Check String (done)
+  // - If String: Split String Method (done)
+  //    - No Gutters fraction         (done)
+  //    - No Gutters px               (done)
+  //    - No Gutters auto
+  //    - Gutters fraction            (done)
+  //    - Gutters px                  ()           
+  //    - Gutters auto
+  // - If Number: use numbers
+  //    - No Gutters fraction         (done)     
+  //    - No Gutters px               (done)
+  //    - No Gutters auto
+  //    - Gutters fraction
+  //    - Gutters px               
+  //    - Gutters auto
+
+  //=====================================*/
+  // CHECK FRACTION FOR STRING OR NUMBER
+  //=====================================*/
+  @if (type_of($fraction) == string) {
+    background: red !important;
+    &::before{content: 'str, fr: #{$fraction}';}
+    
+    // If string is a fraction...
+    @if (str-index($fraction, '/') != null) {
+      //...split fraction-string...
+      $separator: str-index($fraction, '/');
+      $nominator: str-slice($fraction, 0, $separator - 1);
+      $denominator: str-slice($fraction, $separator + 1);
+      //...and convert to number.
+      $fraction-result: _str-to-number($nominator) / _str-to-number($denominator);
+    }
+    // If string is a value...
+    @else {
+      //...just convert value to number.
+      $fraction-result: _str-to-number($fraction);
+    } 
+  }
+  @else {
+    background: blue !important;
+    &::before{content: 'num, fr: #{$fraction}';}
+    $fraction-result: $fraction;
+  }
+
+
+  //=====================================*/
+  // Important
+  //=====================================*/
+  @if ($important == true) {
+    $important: !important;
+  }
+  
+
+  //=====================================*/
+  //
+  // NO GUTTERS
+  //
+  //=====================================*/
+  @if ($gutter == 0px or $gutter == false or $gutter == null) {
+    //===================================*/
+    // FRACTION
+    //===================================*/
+    @if ($fraction != null and $fraction-result <= 1) {
+      width: calc(99.9% * (#{$fraction})) $important;  
+      &:nth-child(1n) {
+        float: left;
+        clear: none;
+      }
+    }
+    //===================================*/
+    // PX, EM, %
+    //===================================*/
+    @if ($fraction != null and $fraction-result > 1) {
+      width: #{$fraction} $important;
+      &:nth-child(1n) {
+        float: left;
+        clear: none;
+      }
+    }
+    //===================================*/
+    // AUTO
+    //===================================*/
+    @if ($fraction == null) {
+      flex: 1;
+      &:nth-child(1n) {
+        float: left;
+        clear: none;
+      }
+    }
+  }
+  //=====================================*/
+  //
+  // WITH GUTTERS
+  //
+  //=====================================*/
+  @else {
+    @if ($gutter == true) {
+      $gutter: $whitespace;
+    }
+    //===================================*/
+    // FRACTION WIDTH
+    //===================================*/
+    @if ($fraction != null and $fraction-result <= 1) {
+      
+      // Check for $cylce variable
+      @if ($cycle != null) {
+        $denominator: $cycle;
+      }
+      
+      width: calc(99.9% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction}))) $important;
+      
+      &:nth-child(1n) {
+        float: left;
+        margin-right: $gutter;
+        margin-bottom: $gutter;
+        clear: none;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:nth-child(#{$denominator}n) {
+        margin-right: 0;
+        float: right;
+      }
+      &:nth-child(#{$denominator}n + 1) {
+        clear: both;
+      }
+    }
+    //*===================================*/
+    // PX, EM, %
+    //*===================================*/
+    @if ($fraction != null and $fraction-result > 1) {
+      width: #{$fraction} $important;
+      &:nth-child(1n) {
+        float: left;
+        clear: none;
+      }
+    }
+    //===================================*/
+    // AUTO WIDTH (-> no gutters possible)
+    //===================================*/
+    @if ($fraction == null) {
+      flex: 1;
+      &:nth-child(1n) {
+        float: left;
+        clear: none;
+      }
+    }
+  }
+  //=====================================*/
+  // BEHAVIOR: STACKING
+  //=====================================*/
+  @if ($behavior == stacking) {
+    @include respond-below(m) {
+      flex: auto;
+      width: 100% $important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+}
