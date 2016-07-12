@@ -49,6 +49,8 @@
   @else {
     background: blue !important;
     &::before{content: 'num, fr: #{$fraction}';}
+    $nominator: null;
+    $denominator: null;
     $fraction-result: $fraction;
   }
 
@@ -60,6 +62,19 @@
     $important: !important;
   }
   
+  //=====================================*/
+  // CHECK FOR CYCLE
+  //=====================================*/
+  @if ($cycle != null) {
+    $denominator: $cycle;
+  }
+  
+  //=====================================*/
+  // CHECK FOR GUTTER "TRUE"
+  //=====================================*/
+  @if ($gutter == true) {
+    $gutter: $whitespace;
+  }
 
 
   //=====================================*/
@@ -68,24 +83,40 @@
   //
   //=====================================*/
   @if ($gutter == 0px or $gutter == false or $gutter == null) {
-    //===================================*/
-    // FRACTION
-    //===================================*/
-    @if ($fraction != null and $fraction-result <= 1) {
-      width: calc(99.9% * (#{$fraction})) $important;  
+    
+    // Check if fraction is not empty...
+    @if ($fraction != null) {
+
+      //=====================================*/
+      // FRACTION WIDTH
+      //=====================================*/
+      @if ($fraction-result <= 1) {
+        width: calc(99.9% * (#{$fraction})) $important; 
+      }
+      //=====================================*/
+      // VALUE WIDTH
+      //=====================================*/
+      @else if ($fraction-result > 1) {
+        width: #{$fraction} $important;
+      }
+      //=====================================*/
+      // GRID LOGIC
+      //=====================================*/
       &:nth-child(1n) {
         float: left;
         clear: none;
       }
-    }
-    //===================================*/
-    // PX, EM, %
-    //===================================*/
-    @if ($fraction != null and $fraction-result > 1) {
-      width: #{$fraction} $important;
-      &:nth-child(1n) {
-        float: left;
-        clear: none;
+      &:last-child {
+        margin-right: 0;
+      }
+      // Check for $denominator...
+      @if ($denominator != null) {
+        &:nth-child(#{$denominator}n) {
+          margin-right: 0;
+        }
+        &:nth-child(#{$denominator}n + 1) {
+          clear: both;
+        }
       }
     }
     //===================================*/
@@ -97,67 +128,10 @@
         float: left;
         clear: none;
       }
-    }
-  }
-  //=====================================*/
-  //
-  // WITH GUTTERS
-  //
-  //=====================================*/
-  @else {
-    @if ($gutter == true) {
-      $gutter: $whitespace;
-    }
-    //===================================*/
-    // FRACTION WIDTH
-    //===================================*/
-    @if ($fraction != null and $fraction-result <= 1) {
-      
-      // Check for $cylce variable
-      @if ($cycle != null) {
-        $denominator: $cycle;
-      }
-      
-      width: calc(99.9% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction}))) $important;
-      
-      &:nth-child(1n) {
-        float: left;
-        margin-right: $gutter;
-        margin-bottom: $gutter;
-        clear: none;
-      }
       &:last-child {
         margin-right: 0;
       }
-      &:nth-child(#{$denominator}n) {
-        margin-right: 0;
-      }
-      &:nth-child(#{$denominator}n + 1) {
-        clear: both;
-      }
-    }
-    //*===================================*/
-    // PX, EM, %
-    //*===================================*/
-    @if ($fraction != null and $fraction-result > 1) {
-      
-      // Check for $cylce variable
-      @if ($cycle != null) {
-        $denominator: $cycle;
-      }
-
-      width: #{$fraction} $important;
-      
-      &:nth-child(1n) {
-        float: left;
-        margin-right: $gutter;
-        margin-bottom: $gutter;
-        clear: none;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-      // Check for $denominator
+      // Check for $denominator...
       @if ($denominator != null) {
         &:nth-child(#{$denominator}n) {
           margin-right: 0;
@@ -167,6 +141,54 @@
         }
       }
     }
+  }
+
+
+  //=====================================*/
+  //
+  // WITH GUTTERS
+  //
+  //=====================================*/
+  @else {
+
+    // Check if fraction is not empty...
+    @if ($fraction != null) {
+      
+      //=====================================*/
+      // FRACTION WIDTH
+      //=====================================*/
+      @if ($fraction-result <= 1) {
+        width: calc(99.9% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction}))) $important;
+      }
+      //=====================================*/
+      // VALUE WIDTH
+      //=====================================*/
+      @else if ($fraction-result > 1) {
+        width: #{$fraction} $important;
+      }
+      //=====================================*/
+      // GRID LOGIC
+      //=====================================*/
+      &:nth-child(1n) {
+        float: left;
+        margin-right: $gutter;
+        margin-bottom: $gutter;
+        clear: none;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      // Check for $denominator...
+      @if ($denominator != null) {
+        &:nth-child(#{$denominator}n) {
+          margin-right: 0;
+        }
+        &:nth-child(#{$denominator}n + 1) {
+          clear: both;
+        }
+      }
+    }
+
     //===================================*/
     // AUTO WIDTH (-> no gutters possible)
     //===================================*/
@@ -178,8 +200,12 @@
       }
     }
   }
+
+
   //=====================================*/
-  // BEHAVIOR: STACKING
+  //
+  // BEHAVIOR
+  //
   //=====================================*/
   @if ($behavior == stacking) {
     @include respond-below(m) {
