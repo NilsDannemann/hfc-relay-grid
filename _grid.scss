@@ -7,6 +7,7 @@
 
   // TODO:
   // - Check String (done)
+  //
   // - If String: Split String Method (done)
   //    - No Gutters fraction         (done)
   //    - No Gutters px               (done)
@@ -14,6 +15,7 @@
   //    - Gutters fraction            (done)
   //    - Gutters px                  (done)           
   //    - Gutters auto
+  //
   // - If Number: use numbers
   //    - No Gutters fraction         (done)     
   //    - No Gutters px               (done)
@@ -21,6 +23,9 @@
   //    - Gutters fraction
   //    - Gutters px               
   //    - Gutters auto
+  //
+  // - Responsive Overrides
+
 
   //=====================================*/
   // CHECK FRACTION FOR STRING OR NUMBER
@@ -91,7 +96,7 @@
       // FRACTION WIDTH
       //=====================================*/
       @if ($fraction-result <= 1) {
-        width: calc(99.9% * (#{$fraction})) $important; 
+        width: calc(99.999999% * (#{$fraction})) $important; 
       }
       //=====================================*/
       // VALUE WIDTH
@@ -158,7 +163,7 @@
       // FRACTION WIDTH
       //=====================================*/
       @if ($fraction-result <= 1) {
-        width: calc(99.9% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction}))) $important;
+        width: calc(99.999999% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction}))) $important;
       }
       //=====================================*/
       // VALUE WIDTH
