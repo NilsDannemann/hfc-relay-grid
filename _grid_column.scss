@@ -52,17 +52,17 @@
       $denominator: str-slice($fraction, $separator + 1);
       $fraction-result: _str-to-number($nominator) / _str-to-number($denominator);
     }
+    // ...is 'content'...
+    @else if ($fraction == 'content') {
+      $nominator: null;
+      $denominator: null;
+      $fraction-result: 'content';
+    }
     // ...is 'auto'...
     @else if ($fraction == 'auto') {
       $nominator: null;
       $denominator: null;
       $fraction-result: 'auto';
-    }
-    // ...is 'auto'...
-    @else if ($fraction == 'content') {
-      $nominator: null;
-      $denominator: null;
-      $fraction-result: 'content';
     }
     // ...is a value (e.g. 10px)...
     @else {
