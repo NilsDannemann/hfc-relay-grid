@@ -14,11 +14,11 @@
   //    - No Gutters fraction         (done)
   //    - No Gutters px               (done)
   //    - No Gutters auto             (done)
-  //    - No Gutters content          ()
+  //    - No Gutters content          (done)
   //    - Gutters fraction            (done)
   //    - Gutters px                  (done)           
   //    - Gutters auto                (done)
-  //    - Gutters content             ()
+  //    - Gutters content             (done)
   //
   // - If Number: use numbers
   //    - No Gutters fraction         (done) (disabled)    
@@ -37,8 +37,6 @@
   // IF STRING...
   @if (type_of($fraction) == string) {
     //--------------------------------------DEBUG
-    // background: #f1f1f1 !important;
-    // &::before{content: 'str, fr: #{$fraction}';}
     @if ($cycle == null) {
       &::before{content: 'column(\'#{$fraction}\')';display: block;width: 100%; margin-right: -200px;}
     }
@@ -75,15 +73,6 @@
   }
   // IF NUMBER...
   @else if (type_of($fraction) == number) {
-    //--------------------------------------DEBUG
-    // background: blue !important;
-    // &::before{content: 'num, fr: #{$fraction}';}
-    //--------------------------------------DEBUG
-
-    // $nominator: null;
-    // $denominator: null;
-    // $fraction-result: $fraction;
-
     @error "HFC RELAY ERROR --> The Column Mixin only accepts a string as the first parameter. --> Examples: @include column('1/3'); or @include column('10px');";
   }
 
@@ -91,141 +80,85 @@
   //=====================================*/
   // CHECK FOR IMPORTANT
   //=====================================*/
-  @if ($important == true) {
-    $important: !important;
-  }
+  @if ($important == true) {$important: !important;}
   
   //=====================================*/
   // CHECK FOR CYCLE
   //=====================================*/
-  @if ($cycle != null) {
-    $denominator: $cycle;
-  }
+  @if ($cycle != null) {$denominator: $cycle;}
   
   //=====================================*/
   // CHECK FOR GUTTER "TRUE"
   //=====================================*/
-  @if ($gutter == true) {
-    $gutter: $whitespace;
-  }
-
+  @if ($gutter == true) {$gutter: $whitespace;}
 
 
 
   //=====================================*/
   //
-  // NO GUTTERS
+  // GRID
   //
   //=====================================*/
-  @if ($gutter == 0px or $gutter == false or $gutter == null) {
-    
-    //=====================================*/
-    // FRACTION WIDTH
-    //=====================================*/
-    @if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result <= 1) {
+
+  //=====================================*/
+  // FRACTION WIDTH
+  //=====================================*/
+  @if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result <= 1) {
+    // WITH GUTTERS
+    @if ($gutter == 0px or $gutter == false or $gutter == null) {
       width: calc(99.999999% * (#{$fraction})) $important; 
-      flex: none $important; //For: override auto columns
     }
-    //=====================================*/
-    // VALUE WIDTH
-    //=====================================*/
-    @else if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result > 1) {
-      width: #{$fraction} $important;
-      flex: none $important; //For: override auto columns
-    }
-    //=====================================*/
-    // CONTENT WIDTH
-    //=====================================*/
-    @else if ($fraction-result == 'content') {
-      width: auto $important;
-      flex: none $important; //For: override auto columns
-    }
-    //=====================================*/
-    // AUTO WIDTH
-    //=====================================*/
-    @else if ($fraction-result == 'auto') {
-      flex: 1 $important;
-    }
-    //=====================================*/
-    // GRID LOGIC
-    //=====================================*/
-    &:nth-child(1n) {
-      float: left;
-      clear: none;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-    // Check for $denominator...
-    @if ($denominator != null) {
-      &:nth-child(#{$denominator}n) {
-        margin-right: 0;
-      }
-      &:nth-child(#{$denominator}n + 1) {
-        clear: both;
-      }
-    }
-
-  }
-
-
-  //=====================================*/
-  //
-  // WITH GUTTERS
-  //
-  //=====================================*/
-  @else {
-
-    //=====================================*/
-    // FRACTION WIDTH
-    //=====================================*/
-    @if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result <= 1) {
+    // NO GUTTERS
+    @else {
       width: calc(99.999999% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction}))) $important;
-      flex: none $important; //For: override auto columns
     }
-    //=====================================*/
-    // VALUE WIDTH
-    //=====================================*/
-    @else if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result > 1) {
-      width: #{$fraction} $important;
-      flex: none $important; //For: override auto columns
-    }
-    //=====================================*/
-    // CONTENT WIDTH
-    //=====================================*/
-    @else if ($fraction-result == 'content') {
-      width: auto $important;
-      flex: none $important; //For: override auto columns
-    }
-    //=====================================*/
-    // AUTO WIDTH
-    //=====================================*/
-    @else if ($fraction-result == 'auto') {
-      flex: 1 $important;
-    }
-    //=====================================*/
-    // GRID LOGIC
-    //=====================================*/
-    &:nth-child(1n) {
-      float: left;
+    flex: none $important; //For: override auto columns
+  }
+  //=====================================*/
+  // VALUE WIDTH
+  //=====================================*/
+  @else if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result > 1) {
+    width: #{$fraction} $important;
+    flex: none $important; //For: override auto columns
+  }
+  //=====================================*/
+  // CONTENT WIDTH
+  //=====================================*/
+  @else if ($fraction-result == 'content') {
+    width: auto $important;
+    flex: none $important; //For: override auto columns
+  }
+  //=====================================*/
+  // AUTO WIDTH
+  //=====================================*/
+  @else if ($fraction-result == 'auto') {
+    flex: 1 $important;
+  }
+  //=====================================*/
+  // GRID LOGIC
+  //=====================================*/
+  &:nth-child(1n) {
+    float: left;
+    clear: none;
+    // IF GUTTERS
+    @if ($gutter != 0px or $gutter != false or $gutter != null) {
       margin-right: $gutter;
       margin-bottom: $gutter;
-      clear: none;
     }
-    &:last-child {
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  // Check for $denominator...
+  @if ($denominator != null) {
+    &:nth-child(#{$denominator}n) {
       margin-right: 0;
     }
-    // Check for $denominator...
-    @if ($denominator != null) {
-      &:nth-child(#{$denominator}n) {
-        margin-right: 0;
-      }
-      &:nth-child(#{$denominator}n + 1) {
-        clear: both;
-      }
+    &:nth-child(#{$denominator}n + 1) {
+      clear: both;
     }
-
   }
+
 
 
   //=====================================*/

@@ -113,9 +113,9 @@ div {
 
 .fraction-with-gutter:nth-child(1n) {
   float: left;
+  clear: none;
   margin-right: 20px;
   margin-bottom: 20px;
-  clear: none;
 }
 
 .fraction-with-gutter:last-child {
@@ -169,9 +169,9 @@ div {
 
 .fixed-with-gutter:nth-child(1n) {
   float: left;
+  clear: none;
   margin-right: 20px;
   margin-bottom: 20px;
-  clear: none;
 }
 
 .fixed-with-gutter:last-child {
@@ -217,9 +217,9 @@ div {
 
 .content-with-gutter:nth-child(1n) {
   float: left;
+  clear: none;
   margin-right: 20px;
   margin-bottom: 20px;
-  clear: none;
 }
 
 .content-with-gutter:last-child {
@@ -263,9 +263,9 @@ div {
 
 .auto-with-gutter:nth-child(1n) {
   float: left;
+  clear: none;
   margin-right: 20px;
   margin-bottom: 20px;
-  clear: none;
 }
 
 .auto-with-gutter:last-child {
@@ -333,9 +333,9 @@ div {
 
 .auto-combination-with-gutter.fixed:nth-child(1n) {
   float: left;
+  clear: none;
   margin-right: 20px;
   margin-bottom: 20px;
-  clear: none;
 }
 
 .auto-combination-with-gutter.fixed:last-child {
@@ -357,9 +357,9 @@ div {
 
 .auto-combination-with-gutter.auto:nth-child(1n) {
   float: left;
+  clear: none;
   margin-right: 20px;
   margin-bottom: 20px;
-  clear: none;
 }
 
 .auto-combination-with-gutter.auto:last-child {
@@ -382,9 +382,9 @@ div {
 
 .multiline-with-gutter:nth-child(1n) {
   float: left;
+  clear: none;
   margin-right: 20px;
   margin-bottom: 20px;
-  clear: none;
 }
 
 .multiline-with-gutter:last-child {
@@ -508,9 +508,9 @@ div {
 
 .multiline-and-uneven-with-gutter.small:nth-child(1n) {
   float: left;
+  clear: none;
   margin-right: 20px;
   margin-bottom: 20px;
-  clear: none;
 }
 
 .multiline-and-uneven-with-gutter.small:last-child {
@@ -541,9 +541,9 @@ div {
 
 .multiline-and-uneven-with-gutter.big:nth-child(1n) {
   float: left;
+  clear: none;
   margin-right: 20px;
   margin-bottom: 20px;
-  clear: none;
 }
 
 .multiline-and-uneven-with-gutter.big:last-child {
