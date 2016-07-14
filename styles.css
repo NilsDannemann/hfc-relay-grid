@@ -57,6 +57,7 @@ div {
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #333;
   font-size: 12px;
+  overflow: hidden;
 }
 
 .column1 {
@@ -67,9 +68,10 @@ div {
 }
 
 .column1::before {
-  content: "1/3";
+  content: "column('1/3')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column1:nth-child(1n) {
@@ -97,9 +99,10 @@ div {
 }
 
 .column2::before {
-  content: "1/3";
+  content: "column('1/3')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column2:nth-child(1n) {
@@ -122,16 +125,17 @@ div {
 }
 
 .column3 {
-  width: 150px ;
+  width: 165px ;
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
 .column3::before {
-  content: "150px";
+  content: "column('165px')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column3:nth-child(1n) {
@@ -144,16 +148,17 @@ div {
 }
 
 .column4 {
-  width: 150px ;
+  width: 165px ;
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
 .column4::before {
-  content: "150px";
+  content: "column('165px')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column4:nth-child(1n) {
@@ -174,9 +179,10 @@ div {
 }
 
 .column5::before {
-  content: "auto";
+  content: "column('auto')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column5:nth-child(1n) {
@@ -195,9 +201,10 @@ div {
 }
 
 .column6::before {
-  content: "auto";
+  content: "column('auto')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column6:nth-child(1n) {
@@ -218,9 +225,10 @@ div {
 }
 
 .column7::before {
-  content: "auto";
+  content: "column('auto')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column7:nth-child(1n) {
@@ -233,16 +241,17 @@ div {
 }
 
 .column7.auto {
-  width: 150px ;
+  width: 165px ;
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
 .column7.auto::before {
-  content: "150px";
+  content: "column('165px')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column7.auto:nth-child(1n) {
@@ -261,9 +270,10 @@ div {
 }
 
 .column8::before {
-  content: "auto";
+  content: "column('auto')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column8:nth-child(1n) {
@@ -278,16 +288,17 @@ div {
 }
 
 .column8.auto {
-  width: 150px ;
+  width: 165px ;
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
 .column8.auto::before {
-  content: "150px";
+  content: "column('165px')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column8.auto:nth-child(1n) {
@@ -309,9 +320,10 @@ div {
 }
 
 .column9::before {
-  content: "1/3";
+  content: "column('1/3')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column9:nth-child(1n) {
@@ -341,9 +353,10 @@ div {
 }
 
 .column10::before {
-  content: "1/3";
+  content: "column('1/3')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column10:nth-child(1n) {
@@ -371,9 +384,10 @@ div {
 }
 
 .column11::before {
-  content: "1/4";
+  content: "column('1/4')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column11:nth-child(1n) {
@@ -401,9 +415,10 @@ div {
 }
 
 .column12::before {
-  content: "2/4";
+  content: "column('2/4')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column12:nth-child(1n) {
@@ -431,9 +446,10 @@ div {
 }
 
 .column13::before {
-  content: "1/4";
+  content: "column('1/4, 3')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column13:nth-child(1n) {
@@ -463,9 +479,10 @@ div {
 }
 
 .column14::before {
-  content: "2/4";
+  content: "column('2/4, 3')";
   display: block;
   width: 100%;
+  margin-right: -200px;
 }
 
 .column14:nth-child(1n) {

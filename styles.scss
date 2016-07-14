@@ -27,6 +27,7 @@ div {
   border: 1px solid rgba(0,0,0,0.1);
   color: #333;
   font-size: 12px;
+  overflow: hidden;
 }
 
 // Fractions
@@ -39,10 +40,10 @@ div {
 
 // Fixed Width
 .column3{
-  @include column('150px');
+  @include column('165px');
 }
 .column4{
-  @include column('150px', $gutter: true);
+  @include column('165px', $gutter: true);
 }
 
 // Auto Width
@@ -58,13 +59,13 @@ div {
   @include column('auto');
 }
 .column7.auto{
-  @include column('150px');
+  @include column('165px');
 }
 .column8{
   @include column('auto', $gutter: true);
 }
 .column8.auto{
-  @include column('150px', $gutter: true);
+  @include column('165px', $gutter: true);
 }
 
 // Multiline & Nested

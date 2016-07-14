@@ -37,7 +37,12 @@
     //--------------------------------------DEBUG
     // background: #f1f1f1 !important;
     // &::before{content: 'str, fr: #{$fraction}';}
-    &::before{content: '#{$fraction}';display: block;width: 100%;}
+    @if ($cycle == null) {
+      &::before{content: 'column(\'#{$fraction}\')';display: block;width: 100%; margin-right: -200px;}
+    }
+    @else {
+      &::before{content: 'column(\'#{$fraction}, #{$cycle}\')';display: block;width: 100%; margin-right: -200px;}
+    } 
     //--------------------------------------DEBUG
 
     // ...is a fraction...
