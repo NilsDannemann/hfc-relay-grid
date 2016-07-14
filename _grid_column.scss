@@ -13,16 +13,16 @@
   // - If String: Split String Method (done)
   //    - No Gutters fraction         (done)
   //    - No Gutters px               (done)
-  //    - No Gutters auto
+  //    - No Gutters auto             (done)
   //    - Gutters fraction            (done)
   //    - Gutters px                  (done)           
-  //    - Gutters auto
+  //    - Gutters auto                (done)
   //
   // - If Number: use numbers
-  //    - No Gutters fraction         (done)     
-  //    - No Gutters px               (done)
+  //    - No Gutters fraction         (done) (disabled)    
+  //    - No Gutters px               (done) (disabled)
   //    - No Gutters auto
-  //    - Gutters fraction:           ()
+  //    - Gutters fraction
   //    - Gutters px               
   //    - Gutters auto
   //
@@ -34,30 +34,38 @@
   //=====================================*/
   // IF STRING...
   @if (type_of($fraction) == string) {
-    background: red !important;
-    &::before{content: 'str, fr: #{$fraction}';}
-    
+    //--------------------------------------DEBUG
+    // background: #f1f1f1 !important;
+    // &::before{content: 'str, fr: #{$fraction}';}
+    &::before{content: '#{$fraction}';display: block;width: 100%;}
+    //--------------------------------------DEBUG
+
     // ...is a fraction...
     @if (str-index($fraction, '/') != null) {
-      //...split fraction-string...
       $separator: str-index($fraction, '/');
       $nominator: str-slice($fraction, 0, $separator - 1);
       $denominator: str-slice($fraction, $separator + 1);
-      //...and convert to number.
       $fraction-result: _str-to-number($nominator) / _str-to-number($denominator);
+    }
+    // ...is 'auto'...
+    @else if ($fraction == 'auto') {
+      $nominator: null;
+      $denominator: null;
+      $fraction-result: 'auto';
     }
     // ...is a value (e.g. 10px)...
     @else {
       $nominator: null;
       $denominator: null;
-      //...just convert value to number.
       $fraction-result: _str-to-number($fraction);
     } 
   }
   // IF NUMBER...
   @else if (type_of($fraction) == number) {
+    //--------------------------------------DEBUG
     // background: blue !important;
     // &::before{content: 'num, fr: #{$fraction}';}
+    //--------------------------------------DEBUG
 
     // $nominator: null;
     // $denominator: null;
@@ -98,63 +106,46 @@
   //=====================================*/
   @if ($gutter == 0px or $gutter == false or $gutter == null) {
     
-    // Check if fraction is not empty...
-    @if ($fraction != null) {
-
-      //=====================================*/
-      // FRACTION WIDTH
-      //=====================================*/
-      @if ($fraction-result <= 1) {
-        width: calc(99.999999% * (#{$fraction})) $important; 
-      }
-      //=====================================*/
-      // VALUE WIDTH
-      //=====================================*/
-      @else if ($fraction-result > 1) {
-        width: #{$fraction} $important;
-      }
-      //=====================================*/
-      // GRID LOGIC
-      //=====================================*/
-      &:nth-child(1n) {
-        float: left;
-        clear: none;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-      // Check for $denominator...
-      @if ($denominator != null) {
-        &:nth-child(#{$denominator}n) {
-          margin-right: 0;
-        }
-        &:nth-child(#{$denominator}n + 1) {
-          clear: both;
-        }
-      }
+    //=====================================*/
+    // FRACTION WIDTH
+    //=====================================*/
+    @if ($fraction-result != 'auto' and $fraction-result <= 1) {
+      width: calc(99.999999% * (#{$fraction})) $important; 
+      flex: none; //For: override auto columns
     }
-    //===================================*/
-    // AUTO
-    //===================================*/
-    @if ($fraction == null) {
+    //=====================================*/
+    // VALUE WIDTH
+    //=====================================*/
+    @else if ($fraction-result != 'auto' and $fraction-result > 1) {
+      width: #{$fraction} $important;
+      flex: none; //For: override auto columns
+    }
+    //=====================================*/
+    // AUTO WIDTH
+    //=====================================*/
+    @else if ($fraction-result == 'auto') {
       flex: 1;
-      &:nth-child(1n) {
-        float: left;
-        clear: none;
-      }
-      &:last-child {
+    }
+    //=====================================*/
+    // GRID LOGIC
+    //=====================================*/
+    &:nth-child(1n) {
+      float: left;
+      clear: none;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    // Check for $denominator...
+    @if ($denominator != null) {
+      &:nth-child(#{$denominator}n) {
         margin-right: 0;
       }
-      // Check for $denominator...
-      @if ($denominator != null) {
-        &:nth-child(#{$denominator}n) {
-          margin-right: 0;
-        }
-        &:nth-child(#{$denominator}n + 1) {
-          clear: both;
-        }
+      &:nth-child(#{$denominator}n + 1) {
+        clear: both;
       }
     }
+
   }
 
 
@@ -165,54 +156,48 @@
   //=====================================*/
   @else {
 
-    // Check if fraction is not empty...
-    @if ($fraction != null) {
-      
-      //=====================================*/
-      // FRACTION WIDTH
-      //=====================================*/
-      @if ($fraction-result <= 1) {
-        width: calc(99.999999% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction}))) $important;
-      }
-      //=====================================*/
-      // VALUE WIDTH
-      //=====================================*/
-      @else if ($fraction-result > 1) {
-        width: #{$fraction} $important;
-      }
-      //=====================================*/
-      // GRID LOGIC
-      //=====================================*/
-      &:nth-child(1n) {
-        float: left;
-        margin-right: $gutter;
-        margin-bottom: $gutter;
-        clear: none;
-      }
-      &:last-child {
+    //=====================================*/
+    // FRACTION WIDTH
+    //=====================================*/
+    @if ($fraction-result != 'auto' and $fraction-result <= 1) {
+      width: calc(99.999999% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction}))) $important;
+      flex: none; //For: override auto columns
+    }
+    //=====================================*/
+    // VALUE WIDTH
+    //=====================================*/
+    @else if ($fraction-result != 'auto' and $fraction-result > 1) {
+      width: #{$fraction} $important;
+      flex: none; //For: override auto columns
+    }
+    //=====================================*/
+    // AUTO WIDTH
+    //=====================================*/
+    @else if ($fraction-result == 'auto') {
+      flex: 1;
+    }
+    //=====================================*/
+    // GRID LOGIC
+    //=====================================*/
+    &:nth-child(1n) {
+      float: left;
+      margin-right: $gutter;
+      margin-bottom: $gutter;
+      clear: none;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    // Check for $denominator...
+    @if ($denominator != null) {
+      &:nth-child(#{$denominator}n) {
         margin-right: 0;
       }
-      // Check for $denominator...
-      @if ($denominator != null) {
-        &:nth-child(#{$denominator}n) {
-          margin-right: 0;
-        }
-        &:nth-child(#{$denominator}n + 1) {
-          clear: both;
-        }
+      &:nth-child(#{$denominator}n + 1) {
+        clear: both;
       }
     }
 
-    //===================================*/
-    // AUTO WIDTH (-> no gutters possible)
-    //===================================*/
-    @if ($fraction == null) {
-      flex: 1;
-      &:nth-child(1n) {
-        float: left;
-        clear: none;
-      }
-    }
   }
 
 

@@ -4,14 +4,10 @@
 /* 
 /* =======================================*/
 
-@mixin flexbox($type: null, $direction: null, $wrap: null, $justify: null, $align: null) {
-	// Flex or Inline-Flex
-	@if $type == 'inline-flex' {
-		display: inline-flex;
-		margin-right: -4px; //fix for: invisible spacing for inline-block
-	} @else {
-		display: flex;
-	}
+@mixin grid($direction: null, $wrap: null, $justify: null, $align: null) {
+	
+	display: flex;
+	
 	// Flex Direction
 	@if $direction == 'column' or $direction == 'col' {
 		flex-direction: column;

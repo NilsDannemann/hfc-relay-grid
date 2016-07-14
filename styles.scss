@@ -1,5 +1,15 @@
-* {box-sizing: border-box;}
 $whitespace: 20px;
+
+body {
+  max-width: 1000px;
+  margin: 20px auto;
+  font-family: 'OpenSansRegular', sans-serif;
+  color: #333;
+  * {box-sizing: border-box;}
+  p{color: #666;font-size: 14px;}
+  strong {color: #333;}
+  h3 {border-top: 1px solid #ddd; padding-top: 20px;}
+}
 
 
 @import 'grid_functions';
@@ -8,14 +18,77 @@ $whitespace: 20px;
 
 
 .grid {
-  // @include flexbox();
-  max-width: 1000px;
-  margin: 20px auto;
+  @include grid();
 }
-.box {
-  @include column('1/3', $gutter: 5px);
-  background: rgba(0,0,0,0.15);
+
+div {
+  background: #f1f1f1;
   padding: 10px;
-  border: 1px solid rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,0,0,0.1);
+  color: #333;
+  font-size: 12px;
 }
+
+// Fractions
+.column1 {
+  @include column('1/3');
+}
+.column2 {
+  @include column('1/3', $gutter: true);
+}
+
+// Fixed Width
+.column3{
+  @include column('150px');
+}
+.column4{
+  @include column('150px', $gutter: true);
+}
+
+// Auto Width
+.column5{
+  @include column('auto');
+}
+.column6{
+  @include column('auto', $gutter: true);
+}
+
+// Fixed + Auto Width
+.column7{
+  @include column('auto');
+}
+.column7.auto{
+  @include column('150px');
+}
+.column8{
+  @include column('auto', $gutter: true);
+}
+.column8.auto{
+  @include column('150px', $gutter: true);
+}
+
+// Multiline & Nested
+.column9{
+  @include column('1/3', $gutter: true);
+}
+.column10{
+  @include column('1/3');
+}
+
+// Multiline & Uneven
+.column11 {
+  @include column('1/4');
+}
+.column12 {
+  @include column('2/4');
+}
+
+// Multiline & Uneven width Gutter
+.column13 {
+  @include column('1/4', $cycle: 3, $gutter: true);
+}
+.column14 {
+  @include column('2/4', $cycle: 3, $gutter: true);
+}
+
 
