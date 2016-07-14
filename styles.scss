@@ -2,11 +2,13 @@
 $whitespace: 20px;
 
 
-@import 'functions';
-@import 'grid';
+@import 'grid_functions';
+@import 'grid_flexbox';
+@import 'grid_column';
 
 
 .grid {
+  // @include flexbox();
   max-width: 1000px;
   margin: 20px auto;
 }
