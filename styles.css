@@ -446,7 +446,7 @@ div {
 }
 
 .column13::before {
-  content: "column('1/4, 3')";
+  content: "column('1/4, $cycle: 3')";
   display: block;
   width: 100%;
   margin-right: -200px;
@@ -479,7 +479,7 @@ div {
 }
 
 .column14::before {
-  content: "column('2/4, 3')";
+  content: "column('2/4, $cycle: 3')";
   display: block;
   width: 100%;
   margin-right: -200px;

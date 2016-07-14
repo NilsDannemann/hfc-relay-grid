@@ -41,7 +41,7 @@
       &::before{content: 'column(\'#{$fraction}\')';display: block;width: 100%; margin-right: -200px;}
     }
     @else {
-      &::before{content: 'column(\'#{$fraction}, #{$cycle}\')';display: block;width: 100%; margin-right: -200px;}
+      &::before{content: 'column(\'#{$fraction}, $cycle: #{$cycle}\')';display: block;width: 100%; margin-right: -200px;}
     } 
     //--------------------------------------DEBUG
 
