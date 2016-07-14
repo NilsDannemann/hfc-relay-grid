@@ -66,115 +66,115 @@ div {
   overflow: hidden;
 }
 
-.column1 {
+.fraction {
   width: calc(99.999999% * (1/3));
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column1::before {
+.fraction::before {
   content: "column('1/3')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column1:nth-child(1n) {
+.fraction:nth-child(1n) {
   float: left;
   clear: none;
 }
 
-.column1:last-child {
+.fraction:last-child {
   margin-right: 0;
 }
 
-.column1:nth-child(3n) {
+.fraction:nth-child(3n) {
   margin-right: 0;
 }
 
-.column1:nth-child(3n + 1) {
+.fraction:nth-child(3n + 1) {
   clear: both;
 }
 
-.column2 {
+.fraction-with-gutter {
   width: calc(99.999999% * (1/3) - (20px - 20px * (1/3)));
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column2::before {
+.fraction-with-gutter::before {
   content: "column('1/3')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column2:nth-child(1n) {
+.fraction-with-gutter:nth-child(1n) {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
   clear: none;
 }
 
-.column2:last-child {
+.fraction-with-gutter:last-child {
   margin-right: 0;
 }
 
-.column2:nth-child(3n) {
+.fraction-with-gutter:nth-child(3n) {
   margin-right: 0;
 }
 
-.column2:nth-child(3n + 1) {
+.fraction-with-gutter:nth-child(3n + 1) {
   clear: both;
 }
 
-.column3 {
+.fixed {
   width: 165px ;
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column3::before {
+.fixed::before {
   content: "column('165px')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column3:nth-child(1n) {
+.fixed:nth-child(1n) {
   float: left;
   clear: none;
 }
 
-.column3:last-child {
+.fixed:last-child {
   margin-right: 0;
 }
 
-.column4 {
+.fixed-with-gutter {
   width: 165px ;
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column4::before {
+.fixed-with-gutter::before {
   content: "column('165px')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column4:nth-child(1n) {
+.fixed-with-gutter:nth-child(1n) {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
   clear: none;
 }
 
-.column4:last-child {
+.fixed-with-gutter:last-child {
   margin-right: 0;
 }
 
@@ -201,360 +201,360 @@ div {
   margin-right: 0;
 }
 
-.content-gutter {
+.content-with-gutter {
   width: auto;
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.content-gutter::before {
+.content-with-gutter::before {
   content: "column('content')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.content-gutter:nth-child(1n) {
+.content-with-gutter:nth-child(1n) {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
   clear: none;
 }
 
-.content-gutter:last-child {
+.content-with-gutter:last-child {
   margin-right: 0;
 }
 
-.column5 {
+.auto {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.column5::before {
+.auto::before {
   content: "column('auto')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column5:nth-child(1n) {
+.auto:nth-child(1n) {
   float: left;
   clear: none;
 }
 
-.column5:last-child {
+.auto:last-child {
   margin-right: 0;
 }
 
-.column6 {
+.auto-with-gutter {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.column6::before {
+.auto-with-gutter::before {
   content: "column('auto')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column6:nth-child(1n) {
+.auto-with-gutter:nth-child(1n) {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
   clear: none;
 }
 
-.column6:last-child {
+.auto-with-gutter:last-child {
   margin-right: 0;
 }
 
-.column7 {
+.auto-combination.fixed {
   width: 165px ;
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column7::before {
+.auto-combination.fixed::before {
   content: "column('165px')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column7:nth-child(1n) {
+.auto-combination.fixed:nth-child(1n) {
   float: left;
   clear: none;
 }
 
-.column7:last-child {
+.auto-combination.fixed:last-child {
   margin-right: 0;
 }
 
-.column7.auto {
+.auto-combination.auto {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.column7.auto::before {
+.auto-combination.auto::before {
   content: "column('auto')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column7.auto:nth-child(1n) {
+.auto-combination.auto:nth-child(1n) {
   float: left;
   clear: none;
 }
 
-.column7.auto:last-child {
+.auto-combination.auto:last-child {
   margin-right: 0;
 }
 
-.column8 {
+.auto-combination-with-gutter.fixed {
   width: 165px ;
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column8::before {
+.auto-combination-with-gutter.fixed::before {
   content: "column('165px')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column8:nth-child(1n) {
+.auto-combination-with-gutter.fixed:nth-child(1n) {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
   clear: none;
 }
 
-.column8:last-child {
+.auto-combination-with-gutter.fixed:last-child {
   margin-right: 0;
 }
 
-.column8.auto {
+.auto-combination-with-gutter.auto {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.column8.auto::before {
+.auto-combination-with-gutter.auto::before {
   content: "column('auto')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column8.auto:nth-child(1n) {
+.auto-combination-with-gutter.auto:nth-child(1n) {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
   clear: none;
 }
 
-.column8.auto:last-child {
+.auto-combination-with-gutter.auto:last-child {
   margin-right: 0;
 }
 
-.column9 {
+.multiline-with-gutter {
   width: calc(99.999999% * (1/3) - (20px - 20px * (1/3)));
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column9::before {
+.multiline-with-gutter::before {
   content: "column('1/3')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column9:nth-child(1n) {
+.multiline-with-gutter:nth-child(1n) {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
   clear: none;
 }
 
-.column9:last-child {
+.multiline-with-gutter:last-child {
   margin-right: 0;
 }
 
-.column9:nth-child(3n) {
+.multiline-with-gutter:nth-child(3n) {
   margin-right: 0;
 }
 
-.column9:nth-child(3n + 1) {
+.multiline-with-gutter:nth-child(3n + 1) {
   clear: both;
 }
 
-.column10 {
+.multiline-and-nested {
   width: calc(99.999999% * (1/3));
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column10::before {
+.multiline-and-nested::before {
   content: "column('1/3')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column10:nth-child(1n) {
+.multiline-and-nested:nth-child(1n) {
   float: left;
   clear: none;
 }
 
-.column10:last-child {
+.multiline-and-nested:last-child {
   margin-right: 0;
 }
 
-.column10:nth-child(3n) {
+.multiline-and-nested:nth-child(3n) {
   margin-right: 0;
 }
 
-.column10:nth-child(3n + 1) {
+.multiline-and-nested:nth-child(3n + 1) {
   clear: both;
 }
 
-.column11 {
+.multiline-and-uneven.small {
   width: calc(99.999999% * (1/4));
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column11::before {
+.multiline-and-uneven.small::before {
   content: "column('1/4')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column11:nth-child(1n) {
+.multiline-and-uneven.small:nth-child(1n) {
   float: left;
   clear: none;
 }
 
-.column11:last-child {
+.multiline-and-uneven.small:last-child {
   margin-right: 0;
 }
 
-.column11:nth-child(4n) {
+.multiline-and-uneven.small:nth-child(4n) {
   margin-right: 0;
 }
 
-.column11:nth-child(4n + 1) {
+.multiline-and-uneven.small:nth-child(4n + 1) {
   clear: both;
 }
 
-.column12 {
+.multiline-and-uneven.big {
   width: calc(99.999999% * (2/4));
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column12::before {
+.multiline-and-uneven.big::before {
   content: "column('2/4')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column12:nth-child(1n) {
+.multiline-and-uneven.big:nth-child(1n) {
   float: left;
   clear: none;
 }
 
-.column12:last-child {
+.multiline-and-uneven.big:last-child {
   margin-right: 0;
 }
 
-.column12:nth-child(4n) {
+.multiline-and-uneven.big:nth-child(4n) {
   margin-right: 0;
 }
 
-.column12:nth-child(4n + 1) {
+.multiline-and-uneven.big:nth-child(4n + 1) {
   clear: both;
 }
 
-.column13 {
+.multiline-and-uneven-with-gutter.small {
   width: calc(99.999999% * (1/4) - (20px - 20px * (1/4)));
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column13::before {
+.multiline-and-uneven-with-gutter.small::before {
   content: "column('1/4, $cycle: 3')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column13:nth-child(1n) {
+.multiline-and-uneven-with-gutter.small:nth-child(1n) {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
   clear: none;
 }
 
-.column13:last-child {
+.multiline-and-uneven-with-gutter.small:last-child {
   margin-right: 0;
 }
 
-.column13:nth-child(3n) {
+.multiline-and-uneven-with-gutter.small:nth-child(3n) {
   margin-right: 0;
 }
 
-.column13:nth-child(3n + 1) {
+.multiline-and-uneven-with-gutter.small:nth-child(3n + 1) {
   clear: both;
 }
 
-.column14 {
+.multiline-and-uneven-with-gutter.big {
   width: calc(99.999999% * (2/4) - (20px - 20px * (2/4)));
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
 }
 
-.column14::before {
+.multiline-and-uneven-with-gutter.big::before {
   content: "column('2/4, $cycle: 3')";
   display: block;
   width: 100%;
   margin-right: -200px;
 }
 
-.column14:nth-child(1n) {
+.multiline-and-uneven-with-gutter.big:nth-child(1n) {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
   clear: none;
 }
 
-.column14:last-child {
+.multiline-and-uneven-with-gutter.big:last-child {
   margin-right: 0;
 }
 
-.column14:nth-child(3n) {
+.multiline-and-uneven-with-gutter.big:nth-child(3n) {
   margin-right: 0;
 }
 
-.column14:nth-child(3n + 1) {
+.multiline-and-uneven-with-gutter.big:nth-child(3n + 1) {
   clear: both;
 }
 

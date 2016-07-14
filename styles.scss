@@ -32,72 +32,72 @@ div {
 }
 
 // Fractions
-.column1 {
+.fraction {
   @include column('1/3');
 }
-.column2 {
+.fraction-with-gutter {
   @include column('1/3', $gutter: true);
 }
 
-// Fixed Width
-.column3{
+// Fixed
+.fixed{
   @include column('165px');
 }
-.column4{
+.fixed-with-gutter{
   @include column('165px', $gutter: true);
 }
 
-// Content Width
+// Content
 .content{
   @include column('content');
 }
-.content-gutter{
+.content-with-gutter{
   @include column('content', $gutter: true);
 }
 
-// Auto Width
-.column5{
+// Auto
+.auto{
   @include column('auto');
 }
-.column6{
+.auto-with-gutter{
   @include column('auto', $gutter: true);
 }
 
-// Fixed + Auto Width
-.column7{
+// Auto + Fraction/Fixed/Content
+.auto-combination.fixed{
   @include column('165px');
 }
-.column7.auto{
+.auto-combination.auto{
   @include column('auto');
 }
-.column8{
+.auto-combination-with-gutter.fixed{
   @include column('165px', $gutter: true);
 }
-.column8.auto{
+.auto-combination-with-gutter.auto{
   @include column('auto', $gutter: true);
 }
 
 // Multiline & Nested
-.column9{
+.multiline-with-gutter {
   @include column('1/3', $gutter: true);
 }
-.column10{
+.multiline-and-nested{
   @include column('1/3');
 }
 
 // Multiline & Uneven
-.column11 {
+.multiline-and-uneven.small {
   @include column('1/4');
 }
-.column12 {
+.multiline-and-uneven.big {
   @include column('2/4');
 }
 
-// Multiline & Uneven width Gutter
-.column13 {
+// Multiline & Uneven with Gutter
+.multiline-and-uneven-with-gutter.small {
   @include column('1/4', $cycle: 3, $gutter: true);
 }
-.column14 {
+.multiline-and-uneven-with-gutter.big {
   @include column('2/4', $cycle: 3, $gutter: true);
 }
 
