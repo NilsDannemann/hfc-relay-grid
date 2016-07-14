@@ -47,6 +47,14 @@ div {
   @include column('165px', $gutter: true);
 }
 
+// Content Width
+.content{
+  @include column('content');
+}
+.content-gutter{
+  @include column('content', $gutter: true);
+}
+
 // Auto Width
 .column5{
   @include column('auto');

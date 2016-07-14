@@ -14,9 +14,11 @@
   //    - No Gutters fraction         (done)
   //    - No Gutters px               (done)
   //    - No Gutters auto             (done)
+  //    - No Gutters content          ()
   //    - Gutters fraction            (done)
   //    - Gutters px                  (done)           
   //    - Gutters auto                (done)
+  //    - Gutters content             ()
   //
   // - If Number: use numbers
   //    - No Gutters fraction         (done) (disabled)    
@@ -57,6 +59,12 @@
       $nominator: null;
       $denominator: null;
       $fraction-result: 'auto';
+    }
+    // ...is 'auto'...
+    @else if ($fraction == 'content') {
+      $nominator: null;
+      $denominator: null;
+      $fraction-result: 'content';
     }
     // ...is a value (e.g. 10px)...
     @else {
@@ -114,22 +122,29 @@
     //=====================================*/
     // FRACTION WIDTH
     //=====================================*/
-    @if ($fraction-result != 'auto' and $fraction-result <= 1) {
+    @if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result <= 1) {
       width: calc(99.999999% * (#{$fraction})) $important; 
-      flex: none; //For: override auto columns
+      flex: none $important; //For: override auto columns
     }
     //=====================================*/
     // VALUE WIDTH
     //=====================================*/
-    @else if ($fraction-result != 'auto' and $fraction-result > 1) {
+    @else if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result > 1) {
       width: #{$fraction} $important;
-      flex: none; //For: override auto columns
+      flex: none $important; //For: override auto columns
+    }
+    //=====================================*/
+    // CONTENT WIDTH
+    //=====================================*/
+    @else if ($fraction-result == 'content') {
+      width: auto $important;
+      flex: none $important; //For: override auto columns
     }
     //=====================================*/
     // AUTO WIDTH
     //=====================================*/
     @else if ($fraction-result == 'auto') {
-      flex: 1;
+      flex: 1 $important;
     }
     //=====================================*/
     // GRID LOGIC
@@ -164,22 +179,29 @@
     //=====================================*/
     // FRACTION WIDTH
     //=====================================*/
-    @if ($fraction-result != 'auto' and $fraction-result <= 1) {
+    @if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result <= 1) {
       width: calc(99.999999% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction}))) $important;
-      flex: none; //For: override auto columns
+      flex: none $important; //For: override auto columns
     }
     //=====================================*/
     // VALUE WIDTH
     //=====================================*/
-    @else if ($fraction-result != 'auto' and $fraction-result > 1) {
+    @else if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result > 1) {
       width: #{$fraction} $important;
-      flex: none; //For: override auto columns
+      flex: none $important; //For: override auto columns
+    }
+    //=====================================*/
+    // CONTENT WIDTH
+    //=====================================*/
+    @else if ($fraction-result == 'content') {
+      width: auto $important;
+      flex: none $important; //For: override auto columns
     }
     //=====================================*/
     // AUTO WIDTH
     //=====================================*/
     @else if ($fraction-result == 'auto') {
-      flex: 1;
+      flex: 1 $important;
     }
     //=====================================*/
     // GRID LOGIC
