@@ -18,6 +18,12 @@ body strong {
   color: #333;
 }
 
+body hr {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin-top: 20px;
+}
+
 body h3 {
   border-top: 1px solid #ddd;
   padding-top: 20px;
@@ -219,13 +225,14 @@ div {
 }
 
 .column7 {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 165px ;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
 }
 
 .column7::before {
-  content: "column('auto')";
+  content: "column('165px')";
   display: block;
   width: 100%;
   margin-right: -200px;
@@ -241,14 +248,13 @@ div {
 }
 
 .column7.auto {
-  width: 165px ;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .column7.auto::before {
-  content: "column('165px')";
+  content: "column('auto')";
   display: block;
   width: 100%;
   margin-right: -200px;
@@ -264,13 +270,14 @@ div {
 }
 
 .column8 {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 165px ;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
 }
 
 .column8::before {
-  content: "column('auto')";
+  content: "column('165px')";
   display: block;
   width: 100%;
   margin-right: -200px;
@@ -288,14 +295,13 @@ div {
 }
 
 .column8.auto {
-  width: 165px ;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .column8.auto::before {
-  content: "column('165px')";
+  content: "column('auto')";
   display: block;
   width: 100%;
   margin-right: -200px;

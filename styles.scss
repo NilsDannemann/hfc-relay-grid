@@ -8,6 +8,7 @@ body {
   * {box-sizing: border-box;}
   p{color: #666;font-size: 14px;}
   strong {color: #333;}
+  hr {border: none; border-bottom: 1px solid #ddd; margin-top: 20px;}
   h3 {border-top: 1px solid #ddd; padding-top: 20px;}
 }
 
@@ -56,16 +57,16 @@ div {
 
 // Fixed + Auto Width
 .column7{
-  @include column('auto');
-}
-.column7.auto{
   @include column('165px');
 }
+.column7.auto{
+  @include column('auto');
+}
 .column8{
-  @include column('auto', $gutter: true);
+  @include column('165px', $gutter: true);
 }
 .column8.auto{
-  @include column('165px', $gutter: true);
+  @include column('auto', $gutter: true);
 }
 
 // Multiline & Nested
