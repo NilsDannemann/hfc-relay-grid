@@ -4,32 +4,7 @@
 /*
 /* =======================================*/
 
-@mixin column($fraction: null, $cycle: null, $gutter: null, $behavior: null, $important: null) {
-
-
-  // TODO:
-  // - Check String (done)
-  //
-  // - If String: Split String Method (done)
-  //    - No Gutters fraction         (done)
-  //    - No Gutters px               (done)
-  //    - No Gutters auto             (done)
-  //    - No Gutters content          (done)
-  //    - Gutters fraction            (done)
-  //    - Gutters px                  (done)           
-  //    - Gutters auto                (done)
-  //    - Gutters content             (done)
-  //
-  // - If Number: use numbers
-  //    - No Gutters fraction         (done) (disabled)    
-  //    - No Gutters px               (done) (disabled)
-  //    - No Gutters auto
-  //    - Gutters fraction
-  //    - Gutters px               
-  //    - Gutters auto
-  //
-  // - Responsive Overrides
-
+@mixin column($fraction: null, $cycle: null, $gutter: null, $stacking: null, $important: null) {
 
   //=====================================*/
   // CHECK FOR STRING OR NUMBER
@@ -37,12 +12,21 @@
   // IF STRING...
   @if (type_of($fraction) == string) {
     //--------------------------------------DEBUG
-    @if ($cycle == null) {
-      &::before{content: 'column(\'#{$fraction}\')';display: block;width: 100%; margin-right: -200px;}
+    &::before{
+      @if ($cycle) {
+        content: 'column(\'#{$fraction}, $cycle: #{$cycle}\')';
+      }
+      @else if ($stacking) {
+        content: 'column(\'#{$fraction}\', $stacking: #{$stacking})';
+      }
+      @else {
+        content: 'column(\'#{$fraction}\')';
+      }
+      display: block;
+      width: 100%;
+      margin-right: -200px;
     }
-    @else {
-      &::before{content: 'column(\'#{$fraction}, $cycle: #{$cycle}\')';display: block;width: 100%; margin-right: -200px;}
-    } 
+
     //--------------------------------------DEBUG
 
     // ...is a fraction...
@@ -166,12 +150,39 @@
   // BEHAVIOR
   //
   //=====================================*/
-  @if ($behavior == stacking) {
-    @include respond-below(m) {
-      flex: auto;
-      width: 100% $important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
+
+  //=====================================*/
+  // STACKING STYLES
+  //=====================================*/
+  @mixin stacking-styles() {
+    flex: auto;
+    width: 100% $important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  //=====================================*/
+  // STACKING LOGIC
+  //=====================================*/
+  @if ($stacking) {
+    
+    @if ($stacking == xs) {
+      @include respond-below(xs) {@include stacking-styles;}
     }
+    @if ($stacking == s) {
+      @include respond-below(s) {@include stacking-styles;}
+    }
+    @if ($stacking == true or $stacking == m) {
+      @include respond-below(m) {@include stacking-styles;}
+    }
+    @if ($stacking == l) {
+      @include respond-below(l) {@include stacking-styles;}
+    }
+    @if ($stacking == xl) {
+      @include respond-below(xl) {@include stacking-styles;}
+    }
+    @if ($stacking == xxl) {
+      @include respond-below(xxl) {@include stacking-styles;}
+    }
+
   }
 }

@@ -1,5 +1,54 @@
+/* =======================================*/
+/*
+/* COLORS
+/*
+/* =======================================*/
+/* =======================================*/
+/*
+/* LAYOUT
+/*
+/* =======================================*/
+/* =======================================*/
+/*
+/* TYPOGRAPHY
+/*
+/* =======================================*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,600,400);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300);
+/* =======================================*/
+/*
+/* USER INTERFACE
+/*
+/* =======================================*/
+/* =======================================*/
+/*
+/* ELEMENTQUERIES
+/* 
+/* =======================================*/
+/* =======================================*/
+/* RESPOND AT - use: @include respond-at($name) {...} 
+/* =======================================*/
+/* =======================================*/
+/* RESPOND ABOVE - use: @include respond-above($name) {...} 
+/* =======================================*/
+/* =======================================*/
+/* RESPOND BELOW - use: @include respond-below($name) {...} 
+/* =======================================*/
+/* =======================================*/
+/* RESPOND BETWEEN - use: @include respond-between($name1, $name2) {...} 
+/* =======================================*/
+/* =======================================*/
+/* 
+/* FLEXBOX
+/* 
+/* =======================================*/
+/* =======================================*/
+/*
+/* GRID
+/*
+/* =======================================*/
 body {
-  max-width: 1000px;
+  max-width: 90%;
   margin: 20px auto;
   font-family: 'OpenSansRegular', sans-serif;
   color: #333;
@@ -27,34 +76,15 @@ body hr {
 body h3 {
   border-top: 1px solid #ddd;
   padding-top: 20px;
+  margin-top: 80px;
 }
 
-/* =======================================*/
-/* 
-/* FLEXBOX
-/* 
-/* =======================================*/
-/* =======================================*/
-/*
-/* GRID
-/*
-/* =======================================*/
 .grid {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 div {
@@ -68,9 +98,7 @@ div {
 
 .fraction {
   width: calc(99.999999% * (1/3));
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .fraction::before {
@@ -99,9 +127,7 @@ div {
 
 .fraction-with-gutter {
   width: calc(99.999999% * (1/3) - (20px - 20px * (1/3)));
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .fraction-with-gutter::before {
@@ -132,9 +158,7 @@ div {
 
 .fixed {
   width: 165px ;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .fixed::before {
@@ -155,9 +179,7 @@ div {
 
 .fixed-with-gutter {
   width: 165px ;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .fixed-with-gutter::before {
@@ -180,9 +202,7 @@ div {
 
 .content {
   width: auto;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .content::before {
@@ -203,9 +223,7 @@ div {
 
 .content-with-gutter {
   width: auto;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .content-with-gutter::before {
@@ -227,9 +245,7 @@ div {
 }
 
 .auto {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .auto::before {
@@ -249,9 +265,7 @@ div {
 }
 
 .auto-with-gutter {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .auto-with-gutter::before {
@@ -274,9 +288,7 @@ div {
 
 .auto-combination.fixed {
   width: 165px ;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .auto-combination.fixed::before {
@@ -296,9 +308,7 @@ div {
 }
 
 .auto-combination.auto {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .auto-combination.auto::before {
@@ -319,9 +329,7 @@ div {
 
 .auto-combination-with-gutter.fixed {
   width: 165px ;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .auto-combination-with-gutter.fixed::before {
@@ -343,9 +351,7 @@ div {
 }
 
 .auto-combination-with-gutter.auto {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .auto-combination-with-gutter.auto::before {
@@ -368,9 +374,7 @@ div {
 
 .multiline-with-gutter {
   width: calc(99.999999% * (1/3) - (20px - 20px * (1/3)));
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .multiline-with-gutter::before {
@@ -401,9 +405,7 @@ div {
 
 .multiline-and-nested {
   width: calc(99.999999% * (1/3));
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .multiline-and-nested::before {
@@ -432,9 +434,7 @@ div {
 
 .multiline-and-uneven.small {
   width: calc(99.999999% * (1/4));
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .multiline-and-uneven.small::before {
@@ -463,9 +463,7 @@ div {
 
 .multiline-and-uneven.big {
   width: calc(99.999999% * (2/4));
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .multiline-and-uneven.big::before {
@@ -494,9 +492,7 @@ div {
 
 .multiline-and-uneven-with-gutter.small {
   width: calc(99.999999% * (1/4) - (20px - 20px * (1/4)));
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .multiline-and-uneven-with-gutter.small::before {
@@ -527,9 +523,7 @@ div {
 
 .multiline-and-uneven-with-gutter.big {
   width: calc(99.999999% * (2/4) - (20px - 20px * (2/4)));
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .multiline-and-uneven-with-gutter.big::before {
@@ -558,4 +552,80 @@ div {
   clear: both;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.behavior {
+  width: calc(99.999999% * (1/4));
+  flex: none;
+}
+
+.behavior::before {
+  content: "column('1/4', $stacking: true)";
+  display: block;
+  width: 100%;
+  margin-right: -200px;
+}
+
+.behavior:nth-child(1n) {
+  float: left;
+  clear: none;
+}
+
+.behavior:last-child {
+  margin-right: 0;
+}
+
+.behavior:nth-child(4n) {
+  margin-right: 0;
+}
+
+.behavior:nth-child(4n + 1) {
+  clear: both;
+}
+
+@media only screen and (max-width: 650px) {
+  .behavior {
+    flex: auto;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+.behavior-with-gutter {
+  width: calc(99.999999% * (1/4) - (20px - 20px * (1/4)));
+  flex: none;
+}
+
+.behavior-with-gutter::before {
+  content: "column('1/4', $stacking: true)";
+  display: block;
+  width: 100%;
+  margin-right: -200px;
+}
+
+.behavior-with-gutter:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.behavior-with-gutter:last-child {
+  margin-right: 0;
+}
+
+.behavior-with-gutter:nth-child(4n) {
+  margin-right: 0;
+}
+
+.behavior-with-gutter:nth-child(4n + 1) {
+  clear: both;
+}
+
+@media only screen and (max-width: 650px) {
+  .behavior-with-gutter {
+    flex: auto;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

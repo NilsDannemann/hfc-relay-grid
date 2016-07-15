@@ -1,7 +1,8 @@
-$whitespace: 20px;
+// Setup
+@import "hfc-relay.scss";
 
 body {
-  max-width: 1000px;
+  max-width: 90%;
   margin: 20px auto;
   font-family: 'OpenSansRegular', sans-serif;
   color: #333;
@@ -9,14 +10,8 @@ body {
   p{color: #666;font-size: 14px;}
   strong {color: #333;}
   hr {border: none; border-bottom: 1px solid #ddd; margin-top: 20px;}
-  h3 {border-top: 1px solid #ddd; padding-top: 20px;}
+  h3 {border-top: 1px solid #ddd; padding-top: 20px;margin-top: 80px;}
 }
-
-
-@import 'grid_functions';
-@import 'grid_flexbox';
-@import 'grid_column';
-
 
 .grid {
   @include grid();
@@ -100,5 +95,14 @@ div {
 .multiline-and-uneven-with-gutter.big {
   @include column('2/4', $cycle: 3, $gutter: true);
 }
+
+// Behavior
+.behavior {
+  @include column('1/4', $stacking: true);
+}
+.behavior-with-gutter {
+  @include column('1/4', $gutter: true, $stacking: true);
+}
+
 
 
