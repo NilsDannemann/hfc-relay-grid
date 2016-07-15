@@ -12,18 +12,16 @@ body {
   hr {border: none; border-bottom: 1px solid #ddd; margin-top: 20px;}
   h3 {border-top: 1px solid #ddd; padding-top: 20px;margin-top: 80px;}
 }
-
-.grid {
-  @include grid();
-}
-
 div {
-  background: #f1f1f1;
-  padding: 10px;
-  border: 1px solid rgba(0,0,0,0.1);
+  padding: 15px;
   color: #333;
   font-size: 12px;
   overflow: hidden;
+}
+
+
+.grid {
+  @include grid();
 }
 
 // Fractions
@@ -98,7 +96,7 @@ div {
 
 // Behavior
 .behavior {
-  @include column('1/4', $stacking: true);
+  @include column('1/4', $stacking: xl);
 }
 .behavior-with-gutter {
   @include column('1/4', $gutter: true, $stacking: true);
