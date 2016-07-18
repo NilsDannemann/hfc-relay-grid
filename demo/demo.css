@@ -1,0 +1,1104 @@
+@charset "UTF-8";
+/* =======================================*/
+/*
+/* GRID CONFIG
+/*
+/* =======================================*/
+/* =======================================*/
+/* EXPERIMENTAL FEATURES
+/* =======================================*/
+/* =======================================*/
+/* 
+/* GRID SETUP
+/* 
+/* =======================================*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* =======================================*/
+/* 
+/* GRID FUNCTIONS
+/* 
+/* =======================================*/
+/* =======================================*/
+/* 
+/* GRID
+/* 
+/* =======================================*/
+/* =======================================*/
+/*
+/* GRID COLUMN
+/*
+/* =======================================*/
+/* =======================================*/
+/*
+/* GRID QUERIES
+/* 
+/* =======================================*/
+/* =======================================*/
+/* RESPOND AT - use: @include respond-at($name) {...} 
+/* =======================================*/
+/* =======================================*/
+/* RESPOND ABOVE - use: @include respond-above($name) {...} 
+/* =======================================*/
+/* =======================================*/
+/* RESPOND BELOW - use: @include respond-below($name) {...} 
+/* =======================================*/
+/* =======================================*/
+/* RESPOND BETWEEN - use: @include respond-between($name1, $name2) {...} 
+/* =======================================*/
+/* =======================================*/
+/*
+/* GRID QUERIES - DEBUG
+/* 
+/* =======================================*/
+html:before,
+html:after,
+body:before,
+body:after {
+  padding: 5px 10px;
+  font-size: 13px;
+  font-family: sans-serif;
+  text-align: right;
+  display: block;
+  background: rgba(255, 255, 255, 0.65) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+  position: fixed;
+  right: 20px;
+  z-index: 100000;
+  pointer-events: none;
+}
+
+html:before {
+  bottom: 20px;
+  font-size: 15px;
+  padding: 10px 20px;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 1275px) {
+  html:before {
+    content: "Breakpoint: XXL";
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1275px) {
+  html:before {
+    content: "Breakpoint: XL";
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 960px) {
+  html:before {
+    content: "Breakpoint: L";
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+  html:before {
+    content: "Breakpoint: M";
+  }
+}
+
+@media only screen and (min-width: 485px) and (max-width: 650px) {
+  html:before {
+    content: "Breakpoint: S";
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 485px) {
+  html:before {
+    content: "Breakpoint: XS";
+  }
+}
+
+html:after {
+  bottom: 80px;
+}
+
+@media only screen and (min-width: 1275px) {
+  html:after {
+    content: "respond-at(xxl) ✓";
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1275px) {
+  html:after {
+    content: "respond-at(xl) ✓";
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 960px) {
+  html:after {
+    content: "respond-at(l) ✓";
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+  html:after {
+    content: "respond-at(m) ✓";
+  }
+}
+
+@media only screen and (min-width: 485px) and (max-width: 650px) {
+  html:after {
+    content: "respond-at(s) ✓";
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 485px) {
+  html:after {
+    content: "respond-at(xs) ✓";
+  }
+}
+
+body:before {
+  bottom: 110px;
+}
+
+@media only screen and (min-width: 0px) {
+  body:before {
+    content: "respond-above(xs) ✓";
+  }
+}
+
+@media only screen and (min-width: 485px) {
+  body:before {
+    content: "respond-above(s) ✓";
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  body:before {
+    content: "respond-above(m) ✓";
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  body:before {
+    content: "respond-above(l) ✓";
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  body:before {
+    content: "respond-above(xl) ✓";
+  }
+}
+
+@media only screen and (min-width: 1275px) {
+  body:before {
+    content: "respond-above(xxl) ✓";
+  }
+}
+
+body:after {
+  bottom: 140px;
+}
+
+@media only screen and (max-width: 1275px) {
+  body:after {
+    content: "respond-below(xxl) ✓";
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  body:after {
+    content: "respond-below(xl) ✓";
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body:after {
+    content: "respond-below(l) ✓";
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  body:after {
+    content: "respond-below(m) ✓";
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  body:after {
+    content: "respond-below(s) ✓";
+  }
+}
+
+@media only screen and (max-width: 0px) {
+  body:after {
+    content: "respond-below(xs) ✓";
+  }
+}
+
+body {
+  max-width: 90%;
+  margin: 20px auto;
+  font-family: 'OpenSansRegular', sans-serif;
+  color: #333;
+}
+
+body p {
+  color: #666;
+  font-size: 14px;
+}
+
+body strong {
+  color: #333;
+}
+
+body hr {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+body h3 {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 80px;
+}
+
+div {
+  padding: 15px;
+  background: #f1f1f1;
+  color: #333;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.fraction {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: calc(99.999999% * (1/3));
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.fraction:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.fraction:last-child {
+  margin-right: 0;
+}
+
+.fraction:nth-child(3n) {
+  margin-right: 0;
+}
+
+.fraction:nth-child(3n + 1) {
+  clear: both;
+}
+
+.fraction::before {
+  content: "column('1/3')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.fraction-with-gutter {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: calc(99.999999% * (1/3) - (20px - 20px * (1/3)));
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.fraction-with-gutter:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.fraction-with-gutter:last-child {
+  margin-right: 0;
+}
+
+.fraction-with-gutter:nth-child(3n) {
+  margin-right: 0;
+}
+
+.fraction-with-gutter:nth-child(3n + 1) {
+  clear: both;
+}
+
+.fraction-with-gutter::before {
+  content: "column('1/3')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.fixed {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: 165px ;
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.fixed:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.fixed:last-child {
+  margin-right: 0;
+}
+
+.fixed::before {
+  content: "column('165px')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.fixed-with-gutter {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: 165px ;
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.fixed-with-gutter:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.fixed-with-gutter:last-child {
+  margin-right: 0;
+}
+
+.fixed-with-gutter::before {
+  content: "column('165px')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.content {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: auto;
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.content:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.content:last-child {
+  margin-right: 0;
+}
+
+.content::before {
+  content: "column('content')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.content-with-gutter {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: auto;
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.content-with-gutter:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.content-with-gutter:last-child {
+  margin-right: 0;
+}
+
+.content-with-gutter::before {
+  content: "column('content')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.auto {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  flex: 1;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.auto:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.auto:last-child {
+  margin-right: 0;
+}
+
+.auto::before {
+  content: "column('auto')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.auto-with-gutter {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  flex: 1;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.auto-with-gutter:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.auto-with-gutter:last-child {
+  margin-right: 0;
+}
+
+.auto-with-gutter::before {
+  content: "column('auto')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.auto-combination.fixed {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: 165px ;
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.auto-combination.fixed:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.auto-combination.fixed:last-child {
+  margin-right: 0;
+}
+
+.auto-combination.fixed::before {
+  content: "column('165px')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.auto-combination.auto {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  flex: 1;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.auto-combination.auto:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.auto-combination.auto:last-child {
+  margin-right: 0;
+}
+
+.auto-combination.auto::before {
+  content: "column('auto')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.auto-combination-with-gutter.fixed {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: 165px ;
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.auto-combination-with-gutter.fixed:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.auto-combination-with-gutter.fixed:last-child {
+  margin-right: 0;
+}
+
+.auto-combination-with-gutter.fixed::before {
+  content: "column('165px')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.auto-combination-with-gutter.auto {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  flex: 1;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.auto-combination-with-gutter.auto:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.auto-combination-with-gutter.auto:last-child {
+  margin-right: 0;
+}
+
+.auto-combination-with-gutter.auto::before {
+  content: "column('auto')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.multiline-with-gutter {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: calc(99.999999% * (1/3) - (20px - 20px * (1/3)));
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.multiline-with-gutter:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.multiline-with-gutter:last-child {
+  margin-right: 0;
+}
+
+.multiline-with-gutter:nth-child(3n) {
+  margin-right: 0;
+}
+
+.multiline-with-gutter:nth-child(3n + 1) {
+  clear: both;
+}
+
+.multiline-with-gutter::before {
+  content: "column('1/3')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.multiline-and-nested {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: calc(99.999999% * (1/3));
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.multiline-and-nested:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.multiline-and-nested:last-child {
+  margin-right: 0;
+}
+
+.multiline-and-nested:nth-child(3n) {
+  margin-right: 0;
+}
+
+.multiline-and-nested:nth-child(3n + 1) {
+  clear: both;
+}
+
+.multiline-and-nested::before {
+  content: "column('1/3')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.multiline-and-uneven.small {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: calc(99.999999% * (1/4));
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.multiline-and-uneven.small:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.multiline-and-uneven.small:last-child {
+  margin-right: 0;
+}
+
+.multiline-and-uneven.small:nth-child(4n) {
+  margin-right: 0;
+}
+
+.multiline-and-uneven.small:nth-child(4n + 1) {
+  clear: both;
+}
+
+.multiline-and-uneven.small::before {
+  content: "column('1/4')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.multiline-and-uneven.big {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: calc(99.999999% * (2/4));
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.multiline-and-uneven.big:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.multiline-and-uneven.big:last-child {
+  margin-right: 0;
+}
+
+.multiline-and-uneven.big:nth-child(4n) {
+  margin-right: 0;
+}
+
+.multiline-and-uneven.big:nth-child(4n + 1) {
+  clear: both;
+}
+
+.multiline-and-uneven.big::before {
+  content: "column('2/4')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.multiline-and-uneven-with-gutter.small {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: calc(99.999999% * (1/4) - (20px - 20px * (1/4)));
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.multiline-and-uneven-with-gutter.small:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.multiline-and-uneven-with-gutter.small:last-child {
+  margin-right: 0;
+}
+
+.multiline-and-uneven-with-gutter.small:nth-child(3n) {
+  margin-right: 0;
+}
+
+.multiline-and-uneven-with-gutter.small:nth-child(3n + 1) {
+  clear: both;
+}
+
+.multiline-and-uneven-with-gutter.small::before {
+  content: "column('1/4, $cycle: 3')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.multiline-and-uneven-with-gutter.big {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: calc(99.999999% * (2/4) - (20px - 20px * (2/4)));
+  flex: none;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+.multiline-and-uneven-with-gutter.big:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.multiline-and-uneven-with-gutter.big:last-child {
+  margin-right: 0;
+}
+
+.multiline-and-uneven-with-gutter.big:nth-child(3n) {
+  margin-right: 0;
+}
+
+.multiline-and-uneven-with-gutter.big:nth-child(3n + 1) {
+  clear: both;
+}
+
+.multiline-and-uneven-with-gutter.big::before {
+  content: "column('2/4, $cycle: 3')";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.behavior {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: 100%;
+  margin-bottom: 0px;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+@media only screen and (min-width: 960px) {
+  .behavior {
+    width: calc(99.999999% * (1/4));
+    flex: none;
+  }
+  .behavior:nth-child(1n) {
+    float: left;
+    clear: none;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+  .behavior:last-child {
+    margin-right: 0;
+  }
+  .behavior:nth-child(4n) {
+    margin-right: 0;
+  }
+  .behavior:nth-child(4n + 1) {
+    clear: both;
+  }
+}
+
+.behavior::before {
+  content: "column('1/4', $stacking: xl)";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.behavior-with-gutter {
+  /* =======================================*/
+  /*
+  /* BUILD GRID
+  /*
+  /* =======================================*/
+  width: 100%;
+  margin-bottom: 20px;
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset !important;
+}
+
+@media only screen and (min-width: 800px) {
+  .behavior-with-gutter {
+    width: calc(99.999999% * (1/4) - (20px - 20px * (1/4)));
+    flex: none;
+  }
+  .behavior-with-gutter:nth-child(1n) {
+    float: left;
+    clear: none;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .behavior-with-gutter:last-child {
+    margin-right: 0;
+  }
+  .behavior-with-gutter:nth-child(4n) {
+    margin-right: 0;
+  }
+  .behavior-with-gutter:nth-child(4n + 1) {
+    clear: both;
+  }
+}
+
+.behavior-with-gutter::before {
+  content: "column('1/4', $stacking: true)";
+  display: block;
+  width: 10000px;
+  margin-right: -10000px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+}

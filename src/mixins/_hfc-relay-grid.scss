@@ -1,30 +1,32 @@
 /* =======================================*/
 /* 
-/* FLEXBOX
+/* GRID
 /* 
 /* =======================================*/
 
-@mixin flexbox($type: null, $direction: null, $wrap: null, $justify: null, $align: null) {
-	// Flex or Inline-Flex
-	@if $type == 'inline-flex' {
-		display: inline-flex;
-		margin-right: -4px; //fix for: invisible spacing for inline-block
-	} @else {
-		display: flex;
-	}
-	// Flex Direction
+@mixin grid($direction: null, $wrap: null, $justify: null, $align: null) {
+	
+	display: flex;
+	
+	//=====================================*/
+	// DIRECTION
+	//=====================================*/
 	@if $direction == 'column' or $direction == 'col' {
 		flex-direction: column;
 	} @else {
 		flex-direction: row;
 	}
-	// Flex Wrap
+	//=====================================*/
+	// WRAP
+	//=====================================*/
 	@if $wrap == 'nowrap' or $wrap == 'no-wrap' {
 		flex-wrap: nowrap;
 	} @else {
 		flex-wrap: wrap;
 	}
-	// Justify Content
+	//=====================================*/
+	// JUSTIFY
+	//=====================================*/
 	@if $justify == null or $justify == 'flex-start' or $justify == 'flexstart' or $justify == 'start'{
 		justify-content: flex-start;
 	} @else if $justify == 'flex-end' or $justify == 'flexend' or $justify == 'end' {
@@ -36,7 +38,9 @@
 	} @else if $justify == 'center' {
 		justify-content: center;
 	}
-	// Align items
+	//=====================================*/
+	// ALIGN
+	//=====================================*/
 	@if $align == null or $align == 'flex-start' or $align == 'flexstart' or $align == 'start' {
 		align-items: flex-start;
 	} @else if $align == 'flex-end' or $align == 'flexend' or $align == 'end' {

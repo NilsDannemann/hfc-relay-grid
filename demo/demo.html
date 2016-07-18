@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web</title>
+	<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+	<h1>HFC Relay Grid 2.0</h1>
+	<p>Classless - Responsive - Mobile-First - Flexbox-Enhanced - Float-Grid</p>
+
+
+
+	<h3>Fractions</h3>
+	<p>Pass any fraction you want - e.g. '1/3', '5/10', '50/100'</p>
+	<hr>
+	<p>Fraction</p>
+	<section class="grid">
+	  <div class="fraction"></div>
+	  <div class="fraction"></div>
+	  <div class="fraction"></div>
+	</section>
+	<p>Fraction with Gutter</p>
+	<section class="grid">
+	  <div class="fraction-with-gutter"></div>
+	  <div class="fraction-with-gutter"></div>
+	  <div class="fraction-with-gutter"></div>
+	</section>
+	
+
+
+	<h3>Fixed</h3>
+	<p>Pass any unit you want - px, em, rem, %</p>
+	<hr>
+	<p>Fixed</p>
+	<section class="grid">
+	  <div class="fixed"></div>
+	  <div class="fixed"></div>
+	  <div class="fixed"></div>
+	</section>
+	<p>Fixed with Gutter</p>
+	<section class="grid">
+	  <div class="fixed-with-gutter"></div>
+	  <div class="fixed-with-gutter"></div>
+	  <div class="fixed-with-gutter"></div>
+	</section>
+	
+
+
+	<h3>Content</h3>
+	<p>Let's the content decide the width</p>
+	<hr>
+	<p>Content</p>
+	<section class="grid">
+	  <div class="content">Look at this nice content here!</div>
+	  <div class="content">Look at this nice content here!</div>
+	  <div class="content">Look at this nice content here!</div>
+	</section>
+	<p>Content with Gutter</p>
+	<section class="grid">
+	  <div class="content-with-gutter">Look at this nice content here!</div>
+	  <div class="content-with-gutter">Look at this nice content here!</div>
+	  <div class="content-with-gutter">Look at this nice content here!</div>
+	</section>
+
+
+
+	<h3>Auto</h3>
+	<p>Automatically distributes the available width</p>
+	<hr>
+	<p>Auto</p>
+	<section class="grid">
+	  <div class="auto"></div>
+	  <div class="auto"></div>
+	  <div class="auto"></div>
+	</section>
+	<p>Auto with Gutter</p>
+	<section class="grid">
+	  <div class="auto-with-gutter"></div>
+	  <div class="auto-with-gutter"></div>
+	  <div class="auto-with-gutter"></div>
+	</section>
+
+
+
+	<h3>Auto + Fraction/Fixed/Content</h3>
+	<p>Auto can be combined with fraction-, fixed- or content-width</p>
+	<hr>
+	<p>Fixed + Auto</p>
+	<section class="grid">
+	  <div class="auto-combination fixed"></div>
+	  <div class="auto-combination auto"></div>
+	</section>
+	<p>Auto + Auto + Fixed + Auto with Gutter</p>
+	<section class="grid">
+	  <div class="auto-combination-with-gutter fixed"></div>
+	  <div class="auto-combination-with-gutter fixed"></div>
+	  <div class="auto-combination-with-gutter auto"></div>
+	  <div class="auto-combination-with-gutter fixed"></div>
+	</section>
+
+
+
+	<h3>Multiline & Nested</h3>
+	<p>Multiple rows and nested Grids are possible without extra containers</p>
+	<hr>
+	<p>Multiline with Gutter</p>
+	<section class="grid">
+	  <div class="multiline-with-gutter"></div>
+	  <div class="multiline-with-gutter"></div>
+	  <div class="multiline-with-gutter"></div>
+	  <div class="multiline-with-gutter"></div>
+	  <div class="multiline-with-gutter"></div>
+	</section>
+	<p>Multiline & Nested</p>
+	<section class="grid">
+	  <div class="multiline-and-nested"></div>
+	  <div class="multiline-and-nested"></div>
+	  <div class="multiline-and-nested">
+	  	<div class="multiline-and-nested"></div>
+	  	<div class="multiline-and-nested"></div>
+	  	<div class="multiline-and-nested"></div>
+	  </div>
+	  <div class="multiline-and-nested">
+	  	<div class="multiline-and-nested"></div>
+	  	<div class="multiline-and-nested"></div>
+	  	<div class="multiline-and-nested"></div>
+	  </div>
+	  <div class="multiline-and-nested"></div>
+	  <div class="multiline-and-nested"></div>
+	</section>
+	
+
+
+	<h3>Multiline & Uneven</h3>
+	<p>Uneven Grids are possible.</p>
+	<hr>
+	<p>Multiline & Uneven</p>
+	<section class="grid">
+	  <div class="multiline-and-uneven small"></div>
+	  <div class="multiline-and-uneven small"></div>
+	  <div class="multiline-and-uneven big"></div>
+	  <div class="multiline-and-uneven big"></div>
+	  <div class="multiline-and-uneven small"></div>
+	  <div class="multiline-and-uneven small"></div>
+	</section>
+	<p>Multiline & Uneven with Gutter (<strong>Note:</strong> needs cycle variable)</p>
+	<section class="grid">
+	  <div class="multiline-and-uneven-with-gutter small"></div>
+	  <div class="multiline-and-uneven-with-gutter small"></div>
+	  <div class="multiline-and-uneven-with-gutter big"></div>
+	  <div class="multiline-and-uneven-with-gutter big"></div>
+	  <div class="multiline-and-uneven-with-gutter small"></div>
+	  <div class="multiline-and-uneven-with-gutter small"></div>
+	</section>
+
+
+
+	<h3>Behavior</h3>
+	<p>
+		Behavior presets for responsive Design. 
+		<br>Stacking: xs, s, m (or true), l, xl, xxl
+	</p>
+	<hr>
+	<p>Stacking</p>
+	<section class="grid">
+	  <div class="behavior"></div>
+	  <div class="behavior"></div>
+	  <div class="behavior"></div>
+	  <div class="behavior"></div>
+	</section>
+	<p>Stacking with Gutter</p>
+	<section class="grid">
+	  <div class="behavior-with-gutter"></div>
+	  <div class="behavior-with-gutter"></div>
+	  <div class="behavior-with-gutter"></div>
+	  <div class="behavior-with-gutter"></div>
+	</section>
+
+</body>
+</html>
