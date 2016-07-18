@@ -1,6 +1,12 @@
-//=====================================*/
+/* =======================================*/
+/* 
+/* GRID FUNCTIONS
+/* 
+/* =======================================*/
+
+//========================================*/
 // String to Number Function
-//=====================================*/
+//========================================*/
 @function _str-to-number($value) {
   @if type-of($value) == 'number' {
     @return $value;
@@ -8,7 +14,6 @@
     $_: log('Value for `to-number` should be a number or a string.');
   }
 
-  
   $result: 0;
   $digits: 0;
   $minus: str-slice($value, 1, 1) == '-';
@@ -34,9 +39,9 @@
   @return if($minus, -$result, $result);;
 }
 
-//=====================================*/
+//========================================*/
 // String to Unit Function
-//=====================================*/
+//========================================*/
 @function _str-to-unit($value, $unit) {
   $units: ('px': 1px, 'cm': 1cm, 'mm': 1mm, '%': 1%, 'ch': 1ch, 'pc': 1pc, 'in': 1in, 'em': 1em, 'rem': 1rem, 'pt': 1pt, 'ex': 1ex, 'vw': 1vw, 'vh': 1vh, 'vmin': 1vmin, 'vmax': 1vmax);
   

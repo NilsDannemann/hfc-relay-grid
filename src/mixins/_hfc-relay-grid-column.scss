@@ -1,43 +1,11 @@
 /* =======================================*/
 /*
-/* GRID
+/* GRID COLUMN
 /*
 /* =======================================*/
 
-@mixin column($fraction: null, $cycle: null, $gutter: null, $stacking: null, $important: null, $debug: true) {
-  
-  /* =======================================*/
-  /*
-  /* RUN BASIC CHECKS
-  /*
-  /* =======================================*/
-  
-  //=====================================*/
-  // CHECK FOR DEBUG MODE
-  //=====================================*/
-  // If Debug...
-  @if ($debug != null or $devmode-overlay == true) {
-    // ...add outline and color overlay...
-    background: rgba($color-black, 0.085) !important;
-    border: 1px solid rgba($color-black, 0.1) !important;
-    // ...and display passed mixin parameters.
-    &::before{
-      @if ($cycle) {
-        content: 'column(\'#{$fraction}, $cycle: #{$cycle}\')';
-      }
-      @else if ($stacking) {
-        content: 'column(\'#{$fraction}\', $stacking: #{$stacking})';
-      }
-      @else {
-        content: 'column(\'#{$fraction}\')';
-      }
-      display: block;
-      width: 10000px;
-      margin-right: -10000px;
-      font-size: 12px;
-      color: rgba($color-black, 0.85) !important;
-    }
-  }
+@mixin column($fraction: null, $cycle: null, $gutter: null, $stacking: null, $important: null) {
+
   //=====================================*/
   // CHECK FOR STRING
   //=====================================*/
@@ -88,8 +56,6 @@
   // CHECK FOR GUTTER "TRUE"
   //=====================================*/
   @if ($gutter == true) {$gutter: $whitespace;}
-
-
 
   //=====================================*/
   //
@@ -161,7 +127,6 @@
     }
   }
 
-
   /* =======================================*/
   /*
   /* BUILD GRID
@@ -203,5 +168,35 @@
     // ...add grid-logic without responsive mixins
     @include grid-logic();
   }
+  
 
+
+  /* =======================================*/
+  /*
+  /* GRID COLUMN - DEBUG
+  /*
+  /* =======================================*/
+  // If Debug...
+  @if ($debug-grid == true) {
+    // ...add outline and color overlay...
+    background: rgba(#000, 0.05) !important;
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.085) inset !important;
+    // ...and display passed mixin parameters.
+    &::before{
+      @if ($cycle) {
+        content: 'column(\'#{$fraction}, $cycle: #{$cycle}\')';
+      }
+      @else if ($stacking) {
+        content: 'column(\'#{$fraction}\', $stacking: #{$stacking})';
+      }
+      @else {
+        content: 'column(\'#{$fraction}\')';
+      }
+      display: block;
+      width: 10000px;
+      margin-right: -10000px;
+      font-size: 12px;
+      color: rgba(#000, 0.85) !important;
+    }
+  }
 }

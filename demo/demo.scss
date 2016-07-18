@@ -1,12 +1,19 @@
-// Setup
-@import "hfc-relay.scss";
+//=====================================*/
+// IMPORT HFC RELAY GRID &  
+//=====================================*/
+$debug-grid: true;
+$debug-queries: true;
 
+@import "../hfc-relay-grid.scss";
+
+//=====================================*/
+// BASE STYLES
+//=====================================*/
 body {
   max-width: 90%;
   margin: 20px auto;
   font-family: 'OpenSansRegular', sans-serif;
   color: #333;
-  * {box-sizing: border-box;}
   p{color: #666;font-size: 14px;}
   strong {color: #333;}
   hr {border: none; border-bottom: 1px solid #ddd; margin-top: 20px;}
@@ -14,6 +21,7 @@ body {
 }
 div {
   padding: 15px;
+  background: #f1f1f1;
   color: #333;
   font-size: 12px;
   overflow: hidden;
