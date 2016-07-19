@@ -191,24 +191,23 @@ Behaviors are basically a **shorthand for the responsive mixins**.
 By default a column has no special behavior.<br>
 Currently there is only one behavior: "stacking"
 
-**Stacking** <br>
+####Stacking
 This causes the columns to stack on mobile (common pattern).<br>
-The default breakpoint for this to happen is "l". <br>
-But you can just pass a different breakpoint to change this.
+The default breakpoint for this to happen is "l", but you can just pass a different breakpoint to change this.
 
 ```sass
 .parent {
 	@include grid();
 
 	.children {
-		@include column('1/4', $gutter: true, $stacking: true); //stack below l
-		@include column('1/4', $gutter: 10px, $stacking: s); 	//stack below s
+		@include column('1/4', $stacking: true); //stack below breakpoint 'l' (default)
+		@include column('1/4', $stacking: s); 	 //stack below breakpoint 's'
 	}
 }
 ```
 
 
-
+<hr>
 <br>
 ##Other - !important
 
