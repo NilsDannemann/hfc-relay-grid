@@ -52,24 +52,31 @@ This activated the grid and gives you some layout-options via flexbox.<br>
 
 ```sass
 .parent {
-	@include grid();  	 			//basic usage
-	@include grid($align:stretch);  //equal height columns
-	@include grid($justify:end);    //align columns to the right
+	@include grid();
 }
 ```
 
+**Equal Height Columns:** Add ```@include grid($align:stretch);```
+**RTL Layout Columns:** Add ```@include grid($justify:end);```
 
 
 <br>
-##Step 1 - Defining Columns
+##Step 2 - Defining Columns
 You have quite a few options to define the widths of your columns.
 
 **Fractions** <br> 
 The simplest way is to use fractions.
 ```sass
-@include column('1/4'); 	
-@include column('2/9');
-@include column('14/23');
+.parent {
+	@include grid();
+
+	.children {
+		// Pass any fraction
+		@include column('1/4');
+		@include column('2/9');
+		@include column('14/23');
+	}
+}
 ```
 
 **Values** <br> 
