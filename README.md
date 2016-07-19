@@ -13,14 +13,14 @@ This approach has the following advantages over conventional grids:<br>
 <br><hr>
 ## Installation
 
-####Install via npm<br>
-Install the npm package.
+####1. Install the package<br>
+
+Install via npm.
 ```sass
 npm install hfc-relay-grid --save-dev
 ```
 
-####Install via bower<br>
-Install the bower package.
+Install via bower.
 ```sass
 bower install hfc-relay-grid --save-dev
 ```
