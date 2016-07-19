@@ -16,31 +16,6 @@ Both Options are fine.
 
 
 <br>
-##A quick Example
-Before we begin: Here's the most basic usage pattern.
-
-```sass
-.parent {
-	@include grid();
-
-	.children {
-		@include column('1/4');
-	}
-}
-```
-
-You always follow the same pattern:
-
-1. Activate the grid on the parent. <br>
-```@include grid();```
-
-1. Define columns on the children. <br>
-```@include column('1/4');```
-
-That's it.
-
-
-<br>
 # The Guide
 So let's begin.
 
