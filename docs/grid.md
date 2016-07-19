@@ -22,6 +22,7 @@ Here's the most basic usage pattern.
 
 ```sass
 .parent {
+	@include container(); //optional
 	@include grid();
 
 	.children {
