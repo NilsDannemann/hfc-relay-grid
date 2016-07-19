@@ -1,12 +1,6 @@
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/relay_logo.jpg)
 
-The grid is a **fraction-based** grid system and uses flexible sass-mixins instead of fixed classes.<br>
-
-This approach has the following advantages over conventional grids:<br>
-
-- **Flexibility** - just pass any ```$fraction``` and ```$gutter``` you like
-- **Cleanliness** - keep your markup clean and readable
-- **Simplicity** - keep all styles & behavior in one place (separation of concerns)
+A grid system and uses flexible sass-mixins instead of fixed classes.<br>
 
 
 <br>
