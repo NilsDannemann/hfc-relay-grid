@@ -68,7 +68,7 @@ This activated the grid and gives you some layout-options via flexbox.<br>
 ##Step 2 - Define Columns
 You have quite a few options to define the widths of your columns.
 
-####Option 1: Use Fractions <br> 
+####Option 1: Use Fractions 
 Pass any fraction you like.
 ```sass
 .parent {
@@ -83,7 +83,7 @@ Pass any fraction you like.
 }
 ```
 
-####Option 2: Use Values <br> 
+####Option 2: Use Values
 Just pass any value. (px, em, %, rem...)
 ```sass
 .parent {
@@ -98,7 +98,7 @@ Just pass any value. (px, em, %, rem...)
 }
 ```
 
-####Option 3: Use 'auto' <br> 
+####Option 3: Use 'auto'
 Let columns automatically fill the available space.
 ```sass
 .parent {
@@ -136,14 +136,12 @@ You can add gutters like so:
 	@include grid();
 
 	.children {
-		@include column('1/4', $gutter: true);
+		@include column('1/4', $gutter: true);	// uses the $whitespace variable (from the config) for gutters
 	}
 }	
 ```
-**Note:** This uses the global ```$whitespace``` variable from the config for gutters.
 
 ####Customize Gutters
-<br> 
 You can also specify your own gutters like so:
 ```sass
 .parent {
