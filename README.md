@@ -15,19 +15,19 @@ This approach has the following advantages over conventional grids:<br>
 
 ####1. Install the package<br>
 
-Install via npm.
+Option 1: Install via npm
 ```sass
 npm install hfc-relay-grid --save-dev
 ```
 
-Install via bower.
+Option 2: Install via bower
 ```sass
 bower install hfc-relay-grid --save-dev
 ```
 
 
 ####2. Create config<br> 
-Create a `_hfc-relay-config.scss` with [this content](src/_hfc-relay-grid-config.scss) (but remove all the `!default` statements) <br>
+Create a `_hfc-relay-grid-config.scss` with [this content](src/_hfc-relay-grid-config.scss) (but remove all the `!default` statements) <br>
 
 In there you can now:
 - safely override any defaults
@@ -52,7 +52,6 @@ Happy coding.
 <br><hr>
 ## Usage
 
-#### Structure-Layer
 - [Container](docs/container.md)
 - [The Grid](docs/grid.md)
 - [Mediaqueries](docs/mediaqueries.md)
