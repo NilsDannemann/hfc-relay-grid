@@ -10,10 +10,10 @@ This approach has the following advantages over conventional grids:<br>
 - **Simplicity** - keep all styles & behavior in one place (separation of concerns)
 
 
-<br><hr>
-## Installation
+<br>
+#Installation
 
-####1. Install the package<br>
+##1. Install the package<br>
 
 Option 1: Install via npm
 ```sass
@@ -26,7 +26,7 @@ bower install hfc-relay-grid --save-dev
 ```
 
 
-####2. Create config<br> 
+##2. Create config<br> 
 Create a `_hfc-relay-grid-config.scss` with [this content](src/_hfc-relay-grid-config.scss) (but remove all the `!default` statements) <br>
 
 In there you can now:
@@ -35,7 +35,7 @@ In there you can now:
 - toggle features like `debug-grid`
 
 
-####3. Import<br> 
+##3. Import<br> 
 Import both Files in your sass in this order.
 ```sass
 // HFC Relay
@@ -49,14 +49,14 @@ That's it. <br>
 Happy coding.
 
 
-####4. Snippets (Optional)
+##4. Snippets (Optional)
 The Snippets for Sublime Text are optional but make the workflow much faster. <br>
 **Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
 **Usage:** Just type `grid` or `column` and hit `TAB` to place your include.
 
 
 <br><hr>
-## Where to go from there?
+#Where to go from there?
 
 - [Container](docs/container.md)
 - [The Grid](docs/grid.md)
