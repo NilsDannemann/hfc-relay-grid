@@ -161,7 +161,29 @@ But you can also specify your own gutters like so:
 
 
 <br>
-##Step 3 - Adding Behavior
+##Step 4 - Mediaqueries
+
+To go responsive you can use the [responsive mixins](https://github.com/NilsDannemann/hfc-relay-grid/docs/hfc-relay-grid-queries.md).<br>
+
+
+```sass
+.parent {
+	@include grid();
+
+	.children {
+		@include column('1/2', $gutter: true);
+		@include respond-above(m) {
+			@include column('1/4', $gutter: true);
+		}
+	}
+}	
+```
+
+
+
+
+<br>
+##Step 4 - Add Behavior (optinal)
 
 By default a column has no special behavior.<br>
 Currently you can add one behavior: "stacking"
