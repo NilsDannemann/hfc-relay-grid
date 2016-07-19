@@ -16,7 +16,7 @@ Both Options are fine.
 
 
 <br>
-###A quick Example
+#A quick Example
 Before we begin:<br> 
 Here's the most basic usage pattern.
 
@@ -41,7 +41,7 @@ The pattern is always the same:
 That's it.
 
 
-<br><hr>
+<br>
 # The Guide
 So let's begin.
 
@@ -49,26 +49,30 @@ So let's begin.
 ###Using Columns
 You have quite a few options to define the widths of your columns.
 
-**Fractions:** The simplest way is to use fractions.
+**Fractions** <br> 
+The simplest way is to use fractions.
 ```sass
 @include column('1/4'); 	
 @include column('2/9');
 @include column('14/23');
 ```
 
-**Values:** Just pass any value. (px, em, %, rem, anything really).
+**Values** <br> 
+Just pass any value. (px, em, %, rem, anything really).
 ```sass
 @include column('20%'); 	
 @include column('15em');
 @include column('200px');
 ```
 
-**Auto:** Automatically fills the available space.
+**Auto** <br> 
+Automatically fills the available space.
 ```sass
 @include column('auto'); 	
 ```
 
-**Content:** Let's the content of the column determine the width.
+**Content** <br> 
+Let's the content of the column determine the width.
 ```sass
 @include column('content'); 	
 ```
