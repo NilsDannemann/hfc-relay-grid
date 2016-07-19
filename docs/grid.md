@@ -112,7 +112,7 @@ The default breakpoint for this to happen is "l". But you can just pass a differ
 
 ```sass
 @include column('1/6', $gutter: true, $stacking: true); //stack below l
-@include column('1/6', $gutter: true, $stacking: s); 	//stack below s
+@include column('1/6', $gutter: 10px, $stacking: s); 	//stack below s
 ```
 
 
