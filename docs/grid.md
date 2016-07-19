@@ -17,13 +17,13 @@ Then just "code along" with the examples.
 
 **For this you have two options:**
 
-1. Install the Grid and work locally
+1. Install the Grid and work local <br>
 [Installation Guide](http://codepen.io/NilsDannemann/pen/MKZQxe?editors=1100)
 
-1. Use the Playground on Codepen
+1. Use the Playground on Codepen <br>
 [Open Playground](http://codepen.io/NilsDannemann/pen/MKZQxe?editors=1100)
 
-Both Options are fine to learn more about the Grid.
+Both Options are fine.
 
 
 <br><hr>
