@@ -30,7 +30,7 @@ Here's the most basic usage pattern.
 }
 ```
 
-The pattern is always the same:
+You alwys follow the same pattern:
 
 1. Activate the grid on the parent. <br>
 ```@include grid();```
@@ -53,6 +53,10 @@ This activated the grid and gives you some layout-options via flexbox.<br>
 ```sass
 .parent {
 	@include grid();
+
+	.children {
+
+	}
 }
 ```
 
@@ -107,7 +111,7 @@ Let columns automatically fill the available space.
 }	
 ```
 
-####Option 4: Use 'content' <br> 
+####Option 4: Use 'content'
 Let's the content of the column determine the width.
 ```sass
 .parent {
@@ -132,12 +136,14 @@ You can add gutters like so:
 	@include grid();
 
 	.children {
-		@include column('1/4', $gutter: true); 		// use: 'true' or 'false'
+		@include column('1/4', $gutter: true);
 	}
 }	
 ```
 **Note:** This uses the global ```$whitespace``` variable from the config for gutters.
 
+####Customize Gutters
+<br> 
 You can also specify your own gutters like so:
 ```sass
 .parent {
