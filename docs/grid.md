@@ -64,8 +64,8 @@ This activated the grid and gives you some layout-options via flexbox.<br>
 ##Step 2 - Define Columns
 You have quite a few options to define the widths of your columns.
 
-####Option 1: Fractions <br> 
-The simplest way is to use fractions.
+####Option 1: Use Fractions <br> 
+Pass any fraction you like.
 ```sass
 .parent {
 	@include grid();
@@ -79,8 +79,8 @@ The simplest way is to use fractions.
 }
 ```
 
-####Option 2: Values <br> 
-Just pass any value. (px, em, %, rem, anything really).
+####Option 2: Use Values <br> 
+Just pass any value. (px, em, %, rem...)
 ```sass
 .parent {
 	@include grid();
@@ -94,8 +94,8 @@ Just pass any value. (px, em, %, rem, anything really).
 }
 ```
 
-####Option 3: 'Auto' <br> 
-Automatically fills the available space.
+####Option 3: Use 'auto' <br> 
+Let columns automatically fill the available space.
 ```sass
 .parent {
 	@include grid();
@@ -107,7 +107,7 @@ Automatically fills the available space.
 }	
 ```
 
-####Option 4: 'Content' <br> 
+####Option 4: Use 'content' <br> 
 Let's the content of the column determine the width.
 ```sass
 .parent {
@@ -122,23 +122,35 @@ Let's the content of the column determine the width.
 
 
 <br>
-##Step 2 - Adding Gutters
+##Step 3 - Add Gutters
 
-By default a column has no gutters. You can add gutters like so:
+By default a column has no gutters.<br>
+You can add gutters like so:
 
 ```sass
-@include column('1/6', $gutter: true); 		// use: 'true' or 'false'
-@include column('1/6', true); 				// shorthand 
+.parent {
+	@include grid();
+
+	.children {
+		@include column('1/4', $gutter: true); 		// use: 'true' or 'false'
+	}
+}	
 ```
 **Note:** This uses the global ```$whitespace``` variable from the config for gutters.
 
 You can also specify your own gutters like so:
 ```sass
-@include column('1/6', $gutter: 10px); 		// adds px gutters
-@include column('1/6', $gutter: 2em); 		// adds em gutters
-@include column('1/6', $gutter: 3%); 		// adds % gutters
-@include column('1/6', $gutter: $var); 		// you can also use sass-variables
-@include column('1/6', $gutter: $var/2); 	// you can even do math with them
+.parent {
+	@include grid();
+
+	.children {
+		@include column('1/4', $gutter: 10px); 		// adds px gutters
+		@include column('1/4', $gutter: 2em); 		// adds em gutters
+		@include column('1/4', $gutter: 3%); 		// adds % gutters
+		@include column('1/4', $gutter: $var); 		// you can also use sass-variables
+		@include column('1/4', $gutter: $var*0.5); 	// you can even do math with them
+	}
+}	
 ```
 
 
@@ -147,15 +159,15 @@ You can also specify your own gutters like so:
 ##Step 3 - Adding Behavior
 
 By default a column has no special behavior.<br>
-Currently you can add one behavior: "stacking".
+Currently you can add one behavior: "stacking"
 
 **Stacking** <br>
 This causes the columns to stack on mobile (common pattern).<br>
 The default breakpoint for this to happen is "l". But you can just pass a different breakpoint to change this.
 
 ```sass
-@include column('1/6', $gutter: true, $stacking: true); //stack below l
-@include column('1/6', $gutter: 10px, $stacking: s); 	//stack below s
+@include column('1/4', $gutter: true, $stacking: true); //stack below l
+@include column('1/4', $gutter: 10px, $stacking: s); 	//stack below s
 ```
 
 
@@ -166,6 +178,6 @@ The default breakpoint for this to happen is "l". But you can just pass a differ
 Simply pass a $important variable.
 
 ```sass
-@include column('1/6', $important: true); 	// adds !important
+@include column('1/4', $important: true); 	// adds !important
 ```
 
