@@ -184,7 +184,7 @@ To go responsive you can use the [responsive mixins](https://github.com/NilsDann
 
 
 <br>
-##Step 4 - Add Behavior (optional)
+##Step 5 - Add Behavior (optional)
 
 By default a column has no special behavior.<br>
 Currently you can add one behavior: "stacking"
