@@ -17,8 +17,7 @@ Both Options are fine.
 
 <br>
 ##A quick Example
-Before we begin:<br> 
-Here's the most basic usage pattern.
+Before we begin: Here's the most basic usage pattern.
 
 ```sass
 .parent {
@@ -30,7 +29,7 @@ Here's the most basic usage pattern.
 }
 ```
 
-You alwys follow the same pattern:
+You always follow the same pattern:
 
 1. Activate the grid on the parent. <br>
 ```@include grid();```
@@ -171,9 +170,11 @@ To go responsive you can use the [responsive mixins](https://github.com/NilsDann
 	@include grid();
 
 	.children {
-		@include column('1/2', $gutter: true);
+		@include column('1/2');
+		
+		// Will change from 2 to 4 columns above the m breakpoint
 		@include respond-above(m) {
-			@include column('1/4', $gutter: true);
+			@include column('1/4');
 		}
 	}
 }	
