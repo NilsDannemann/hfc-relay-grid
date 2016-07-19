@@ -56,8 +56,8 @@ This activated the grid and gives you some layout-options via flexbox.<br>
 }
 ```
 
-**Equal Height Columns:** Add ```@include grid($align:stretch);```
-**RTL Layout Columns:** Add ```@include grid($justify:end);```
+**Equal Column Height:** Add ```@include grid($align:stretch);```<br>
+**RTL Column Layout:** Add ```@include grid($justify:end);```
 
 
 <br>
@@ -71,7 +71,7 @@ The simplest way is to use fractions.
 	@include grid();
 
 	.children {
-		// Pass any fraction
+		// Pass any fraction...
 		@include column('1/4');
 		@include column('2/9');
 		@include column('14/23');
@@ -82,21 +82,42 @@ The simplest way is to use fractions.
 **Values** <br> 
 Just pass any value. (px, em, %, rem, anything really).
 ```sass
-@include column('20%'); 	
-@include column('15em');
-@include column('200px');
+.parent {
+	@include grid();
+
+	.children {
+		// ...or pass any value...
+		@include column('20%'); 	
+		@include column('15em');
+		@include column('200px');
+	}
+}
 ```
 
 **Auto** <br> 
 Automatically fills the available space.
 ```sass
-@include column('auto'); 	
+.parent {
+	@include grid();
+
+	.children {
+		// ...or use the kayword 'auto'...
+		@include column('auto'); 
+	}
+}	
 ```
 
 **Content** <br> 
 Let's the content of the column determine the width.
 ```sass
-@include column('content'); 	
+.parent {
+	@include grid();
+
+	.children {
+		// ...or use the kayword 'auto'...
+		@include column('content'); 
+	}
+}		
 ```
 
 
