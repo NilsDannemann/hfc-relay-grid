@@ -9,7 +9,7 @@ This approach has the following advantages over conventional grids:<br>
 - **Cleanliness** - keep your Markup clean and readable
 - **Simplicity** - keep all styles & behavior in one place (separation of concerns)
 
-###About this Guide
+#About this Guide
 This Guide will show you the Features of this Grid step by step.
 
 Just starting out? <br>
@@ -17,10 +17,10 @@ Then just "code along" with the examples.
 
 **For this you have two options:**
 
-1. Install the Grid and work local <br>
+1. Either install the grid locally<br>
 [Installation Guide](http://codepen.io/NilsDannemann/pen/MKZQxe?editors=1100)
 
-1. Use the Playground on Codepen <br>
+1. Or use the Playground on Codepen<br>
 [Open Playground](http://codepen.io/NilsDannemann/pen/MKZQxe?editors=1100)
 
 Both Options are fine.
