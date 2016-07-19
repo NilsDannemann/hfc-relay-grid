@@ -46,7 +46,7 @@ That's it.
 So let's begin.
 
 <br><hr>
-###Using Columns
+##Using Columns
 You have quite a few options to define the widths of your columns.
 
 **Fractions** <br> 
