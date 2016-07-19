@@ -136,13 +136,14 @@ You can add gutters like so:
 	@include grid();
 
 	.children {
-		@include column('1/4', $gutter: true);	// uses the $whitespace variable (from the config) for gutters
+		@include column('1/4', $gutter: true);
 	}
 }	
 ```
 
 ####Customize Gutters
-You can also specify your own gutters like so:
+By default gutters use the global ```$whitespace``` variable from the config. <br>
+But you can also specify your own gutters like so:
 ```sass
 .parent {
 	@include grid();
