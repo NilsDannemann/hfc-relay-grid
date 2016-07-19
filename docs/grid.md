@@ -1,3 +1,8 @@
+![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/relay_logo.jpg)
+
+# HFC Relay Framework
+HFC Relay Grid (SCSS)
+
 # Introduction
 The Grid is a **fraction-based** grid system and uses flexible sass-mixins instead of fixed classes.<br>
 
