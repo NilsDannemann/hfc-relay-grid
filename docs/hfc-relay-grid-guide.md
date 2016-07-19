@@ -18,7 +18,7 @@ Ready? Let's go!
 
 <br>
 ##Step 1 - Activate Grid
-This activated the grid and gives you some layout-options via flexbox.<br> 
+This activates the grid and gives you some layout-options via flexbox.<br> 
 
 ```sass
 .parent {
@@ -30,8 +30,9 @@ This activated the grid and gives you some layout-options via flexbox.<br>
 }
 ```
 
-**Equal Column Height:** Add ```@include grid($align:stretch);```<br>
-**RTL Column Layout:** Add ```@include grid($justify:end);```
+####Options
+Equal Column Height - Add ```@include grid($align:stretch);```<br>
+RTL Column Layout - Add ```@include grid($justify:end);```
 
 
 <br>
