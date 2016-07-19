@@ -9,7 +9,7 @@ How to get up and running.
 
 
 <br>
-##1. Install the package<br>
+##1. Install Package<br>
 
 Option 1: Install via npm
 ```sass
@@ -31,7 +31,7 @@ In there you can now:
 - toggle features like `debug-grid`
 
 <br>
-##3. Import<br> 
+##3. Import Files<br> 
 Import both Files in your sass in this order.
 ```sass
 // HFC Relay
@@ -45,7 +45,7 @@ That's it. <br>
 Happy coding.
 
 <br>
-##4. Snippets (Optional)
+##4. Use Snippets (Optional)
 The Snippets for Sublime Text are optional but make the workflow much faster. <br>
 **Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
 **Usage:** Just type `grid` or `column` and hit `TAB` to place your include.
