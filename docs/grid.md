@@ -45,7 +45,7 @@ That's it.
 # The Guide
 So let's begin.
 
-<br><hr>
+<br>
 ##Using Columns
 You have quite a few options to define the widths of your columns.
 
@@ -78,8 +78,8 @@ Let's the content of the column determine the width.
 ```
 
 
-<br><hr>
-###Adding Gutters
+<br>
+##Adding Gutters
 
 By default a column has no gutters. You can add gutters like so:
 
