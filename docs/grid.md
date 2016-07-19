@@ -1,9 +1,6 @@
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/relay_logo.jpg)
 
-# HFC Relay Framework
-HFC Relay Grid (SCSS)
-
-# Introduction
+# About
 The Grid is a **fraction-based** grid system and uses flexible sass-mixins instead of fixed classes.<br>
 
 This approach has the following advantages over conventional grids:<br>
@@ -12,9 +9,9 @@ This approach has the following advantages over conventional grids:<br>
 - **Cleanliness** - keep your Markup clean and readable
 - **Simplicity** - keep all styles & behavior in one place (separation of concerns)
 
-<br><hr>
+<br>
 ###About this Guide
-This Guide will show you the Features of this Grid step by step. 
+This Guide will show you the Features of this Grid step by step. <br>
 If you're just starting out I'd recommend, that you "code along" to better understand things.
 
 For this you have two options:
