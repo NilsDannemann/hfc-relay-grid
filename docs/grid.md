@@ -16,7 +16,7 @@ Both Options are fine.
 
 
 <br>
-#A quick Example
+##A quick Example
 Before we begin:<br> 
 Here's the most basic usage pattern.
 
