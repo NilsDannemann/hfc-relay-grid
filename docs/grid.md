@@ -17,7 +17,8 @@ Both Options are fine.
 
 <br>
 #A quick Example
-Before we begin, here's the most basic usage pattern.
+Before we begin:<br> 
+Here's the most basic usage pattern.
 
 ```sass
 .parent {
@@ -29,9 +30,9 @@ Before we begin, here's the most basic usage pattern.
 }
 ```
 
-The steps are always the same:
+The pattern is always the same:
 
-1. Activate the grid on the parent container. <br>
+1. Activate the grid on the parent. <br>
 ```@include grid();```
 
 1. Define columns for the children. <br>
