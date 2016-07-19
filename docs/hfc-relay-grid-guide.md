@@ -160,7 +160,7 @@ But you can also specify your own gutters like so:
 
 
 <br>
-##Step 4 - Mediaqueries
+##Step 4 - Go Responsive (optional)
 
 To go responsive you can use the [responsive mixins](https://github.com/NilsDannemann/hfc-relay-grid/docs/hfc-relay-grid-queries.md).<br>
 
@@ -172,7 +172,7 @@ To go responsive you can use the [responsive mixins](https://github.com/NilsDann
 	.children {
 		@include column('1/2');
 		
-		// Will change from 2 to 4 columns above the m breakpoint
+		// From 2 to 4 columns above the breakpoint 'm'
 		@include respond-above(m) {
 			@include column('1/4');
 		}
@@ -184,7 +184,7 @@ To go responsive you can use the [responsive mixins](https://github.com/NilsDann
 
 
 <br>
-##Step 4 - Add Behavior (optinal)
+##Step 4 - Add Behavior (optional)
 
 By default a column has no special behavior.<br>
 Currently you can add one behavior: "stacking"
