@@ -16,6 +16,13 @@ Both Options are fine.
 
 
 <br>
+##Snippets
+The Snippets for Sublime Text are optional but make the workflow much faster. <br>
+**Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
+**Usage:** Just type `grid` or `column` and hit `TAB` to place your include.
+
+
+<br>
 ##A quick Example
 Before we begin:<br> 
 Here's the most basic usage pattern.
@@ -125,19 +132,3 @@ Simply pass a $important variable.
 ```sass
 @include column('1/6', $important: true); 	// adds !important
 ```
-
-
-
-<br>
-##Snippets
-The Snippets for Sublime Text are optional but make the workflow much faster. <br>
-**Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
-**Usage:** Just type `column` and hit `TAB` to place your include.
-
-
-
-<br>
-##Playground
-You can test the mixin over here:<br>
-![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/code-playground.svg)
-[Open Playground](http://codepen.io/NilsDannemann/pen/MKZQxe?editors=1100)
