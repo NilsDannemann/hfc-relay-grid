@@ -64,7 +64,7 @@ This activated the grid and gives you some layout-options via flexbox.<br>
 ##Step 2 - Define Columns
 You have quite a few options to define the widths of your columns.
 
-####**Option 1: Fractions** <br> 
+####Option 1: Fractions <br> 
 The simplest way is to use fractions.
 ```sass
 .parent {
@@ -79,7 +79,7 @@ The simplest way is to use fractions.
 }
 ```
 
-**Option 2: Values** <br> 
+####Option 2: Values <br> 
 Just pass any value. (px, em, %, rem, anything really).
 ```sass
 .parent {
@@ -94,7 +94,7 @@ Just pass any value. (px, em, %, rem, anything really).
 }
 ```
 
-**Option 3: 'Auto'** <br> 
+####Option 3: 'Auto' <br> 
 Automatically fills the available space.
 ```sass
 .parent {
@@ -107,7 +107,7 @@ Automatically fills the available space.
 }	
 ```
 
-**Option 4: 'Content'** <br> 
+####Option 4: 'Content' <br> 
 Let's the content of the column determine the width.
 ```sass
 .parent {
