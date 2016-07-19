@@ -1,18 +1,18 @@
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/relay_logo.jpg)
 
 # About the Grid
-The Grid is a **fraction-based** grid system and uses flexible sass-mixins instead of fixed classes.<br>
+The grid is a **fraction-based** grid system and uses flexible sass-mixins instead of fixed classes.<br>
 
 This approach has the following advantages over conventional grids:<br>
 
 - **Flexibility** - just pass any ```$fraction``` and ```$gutter``` you like
-- **Cleanliness** - keep your Markup clean and readable
+- **Cleanliness** - keep your markup clean and readable
 - **Simplicity** - keep all styles & behavior in one place (separation of concerns)
 
 
 <br>
 #About this Guide
-This Guide will show you the Features of this Grid step by step.
+This Guide will show you the features & usage of this grid step by step.
 
 Just starting out? <br>
 Then just "code along" with the examples.
@@ -44,8 +44,13 @@ Before we begin, here's the most basic usage pattern.
 
 The steps are always the same:
 
-1. Activate the Grid on the parent container.
-1. Define Columns for the children.
+1. Activate the grid on the parent container.
+```@include grid();```
+
+1. Define columns for the children.
+```@include column('1/4');```
+
+That's it.
 
 
 <br><hr>
