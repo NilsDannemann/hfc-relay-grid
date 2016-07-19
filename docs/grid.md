@@ -1,6 +1,6 @@
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/relay_logo.jpg)
 
-# About
+# About the Grid
 The Grid is a **fraction-based** grid system and uses flexible sass-mixins instead of fixed classes.<br>
 
 This approach has the following advantages over conventional grids:<br>
@@ -9,6 +9,8 @@ This approach has the following advantages over conventional grids:<br>
 - **Cleanliness** - keep your Markup clean and readable
 - **Simplicity** - keep all styles & behavior in one place (separation of concerns)
 
+
+<br>
 #About this Guide
 This Guide will show you the Features of this Grid step by step.
 
@@ -26,8 +28,8 @@ Then just "code along" with the examples.
 Both Options are fine.
 
 
-<br><hr>
-###A quick Example
+<br>
+#A quick Example
 Before we begin, here's the most basic usage pattern.
 
 ```sass
