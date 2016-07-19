@@ -9,12 +9,13 @@ This approach has the following advantages over conventional grids:<br>
 - **Cleanliness** - keep your Markup clean and readable
 - **Simplicity** - keep all styles & behavior in one place (separation of concerns)
 
-<br>
 ###About this Guide
-This Guide will show you the Features of this Grid step by step. <br>
-If you're just starting out I'd recommend, that you "code along" to better understand things.
+This Guide will show you the Features of this Grid step by step.
 
-For this you have two options:
+Just starting out? <br>
+Then just "code along" with the examples.
+
+**For this you have two options:**
 
 1. Install the Grid and work locally
 [Installation Guide](http://codepen.io/NilsDannemann/pen/MKZQxe?editors=1100)
@@ -23,6 +24,7 @@ For this you have two options:
 [Open Playground](http://codepen.io/NilsDannemann/pen/MKZQxe?editors=1100)
 
 Both Options are fine to learn more about the Grid.
+
 
 <br><hr>
 ###A quick Example
