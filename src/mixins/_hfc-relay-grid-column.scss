@@ -4,7 +4,89 @@
 /*
 /* =======================================*/
 
+
+//=====================================*/
+// DEFINE COLUMN STYLES
+//=====================================*/
+// Determines which styles are necessary, based on the passed arguments.
+@mixin column-styles($fraction, $fraction-result, $gutter, $important, $denominator, $nominator) {
+  //=====================================*/
+  // FRACTION WIDTH
+  //=====================================*/
+  @if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result <= 1) {
+    // WITH GUTTERS
+    @if ($gutter == 0px or $gutter == false or $gutter == null) {
+      width: calc(99.999999% * (#{$fraction})) $important; 
+    }
+    // NO GUTTERS
+    @else {
+      width: calc(99.999999% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction}))) $important;
+    }
+    flex: none $important; //For: override auto columns
+  }
+  //=====================================*/
+  // VALUE WIDTH
+  //=====================================*/
+  @else if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result > 1) {
+    width: #{$fraction} $important;
+    flex: none $important; //For: override auto columns
+  }
+  //=====================================*/
+  // CONTENT WIDTH
+  //=====================================*/
+  @else if ($fraction-result == 'content') {
+    width: auto $important;
+    flex: none $important; //For: override auto columns
+  }
+  //=====================================*/
+  // AUTO WIDTH
+  //=====================================*/
+  @else if ($fraction-result == 'auto') {
+    flex: 1 $important;
+  }
+  //=====================================*/
+  // LOGIC
+  //=====================================*/
+  &:nth-child(1n) {
+    float: left;
+    clear: none;
+    // IF GUTTERS
+    @if ($gutter == 0px or $gutter == false or $gutter == null) {
+      margin-right: 0px;
+      margin-bottom: 0px;
+    }
+    @else {
+      margin-right: $gutter;
+      margin-bottom: $gutter;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  // Check for $denominator...
+  @if ($denominator != null) {
+    &:nth-child(#{$denominator}n) {
+      margin-right: 0;
+    }
+    &:nth-child(#{$denominator}n + 1) {
+      clear: both;
+    }
+  }
+}
+
+
+//=====================================*/
+// CREATE COLUMN
+//=====================================*/
 @mixin column($fraction: null, $cycle: null, $gutter: null, $stacking: null, $important: null) {
+  
+  //=====================================*/
+  // SET DEFAULT VALUES
+  //=====================================*/
+  // Sets default values needed for fraction calculation
+  $fraction-result: null;
+  $denominator: null;
+  $nominator: null;
 
   //=====================================*/
   // CHECK FOR STRING
@@ -20,20 +102,14 @@
     }
     // ...is 'content'...
     @else if ($fraction == 'content') {
-      $nominator: null;
-      $denominator: null;
       $fraction-result: 'content';
     }
     // ...is 'auto'...
     @else if ($fraction == 'auto') {
-      $nominator: null;
-      $denominator: null;
       $fraction-result: 'auto';
     }
     // ...is a value (e.g. 10px)...
     @else {
-      $nominator: null;
-      $denominator: null;
       $fraction-result: _str-to-number($fraction);
     } 
   }
@@ -41,16 +117,6 @@
   @else {
     @error "ERROR: The Column Mixin needs a String. Forgot the Quotes?";
   }
-
-  //=====================================*/
-  // CHECK FOR IMPORTANT
-  //=====================================*/
-  @if ($important == true) {$important: !important;}
-  
-  //=====================================*/
-  // CHECK FOR CYCLE
-  //=====================================*/
-  @if ($cycle != null) {$denominator: $cycle;}
   
   //=====================================*/
   // CHECK FOR GUTTER "TRUE"
@@ -58,79 +124,17 @@
   @if ($gutter == true) {$gutter: $whitespace;}
 
   //=====================================*/
-  //
-  // DEFINE GRID LOGIC
-  //
+  // CHECK FOR CYCLE
   //=====================================*/
-  @mixin grid-logic() {
-    //=====================================*/
-    // FRACTION WIDTH
-    //=====================================*/
-    @if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result <= 1) {
-      // WITH GUTTERS
-      @if ($gutter == 0px or $gutter == false or $gutter == null) {
-        width: calc(99.999999% * (#{$fraction})) $important; 
-      }
-      // NO GUTTERS
-      @else {
-        width: calc(99.999999% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction}))) $important;
-      }
-      flex: none $important; //For: override auto columns
-    }
-    //=====================================*/
-    // VALUE WIDTH
-    //=====================================*/
-    @else if ($fraction-result != 'content' and $fraction-result != 'auto' and $fraction-result > 1) {
-      width: #{$fraction} $important;
-      flex: none $important; //For: override auto columns
-    }
-    //=====================================*/
-    // CONTENT WIDTH
-    //=====================================*/
-    @else if ($fraction-result == 'content') {
-      width: auto $important;
-      flex: none $important; //For: override auto columns
-    }
-    //=====================================*/
-    // AUTO WIDTH
-    //=====================================*/
-    @else if ($fraction-result == 'auto') {
-      flex: 1 $important;
-    }
-    //=====================================*/
-    // LOGIC
-    //=====================================*/
-    &:nth-child(1n) {
-      float: left;
-      clear: none;
-      // IF GUTTERS
-      @if ($gutter == 0px or $gutter == false or $gutter == null) {
-        margin-right: 0px;
-        margin-bottom: 0px;
-      }
-      @else {
-        margin-right: $gutter;
-        margin-bottom: $gutter;
-      }
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-    // Check for $denominator...
-    @if ($denominator != null) {
-      &:nth-child(#{$denominator}n) {
-        margin-right: 0;
-      }
-      &:nth-child(#{$denominator}n + 1) {
-        clear: both;
-      }
-    }
-  }
+  @if ($cycle != null) {$denominator: $cycle;}
+  
+  //=====================================*/
+  // CHECK FOR IMPORTANT
+  //=====================================*/
+  @if ($important == true) {$important: !important;}
 
   /* =======================================*/
-  /*
-  /* BUILD GRID
-  /*
+  /* OUTPUT COLUMN STYLES
   /* =======================================*/
   //If stacking...
   @if ($stacking != null) {
@@ -142,38 +146,36 @@
     @else {
       margin-bottom: $gutter;
     }
-
+    
     // ...and grid logic wrapped in responsive mixins...
     @if ($stacking == xs) {
-      @include respond-above(xs) {@include grid-logic();}
+      @include respond-above(xs) {@include column-styles($fraction, $fraction-result, $gutter, $important, $denominator, $nominator);}
     }
     @if ($stacking == s) {
-      @include respond-above(s) {@include grid-logic();}
+      @include respond-above(s) {@include column-styles($fraction, $fraction-result, $gutter, $important, $denominator, $nominator);}
     }
     @if ($stacking == m) {
-      @include respond-above(m) {@include grid-logic();}
+      @include respond-above(m) {@include column-styles($fraction, $fraction-result, $gutter, $important, $denominator, $nominator);}
     }
     @if ($stacking == true or $stacking == l) {
-      @include respond-above(l) {@include grid-logic();}
+      @include respond-above(l) {@include column-styles($fraction, $fraction-result, $gutter, $important, $denominator, $nominator);}
     }
     @if ($stacking == xl) {
-      @include respond-above(xl) {@include grid-logic();}
+      @include respond-above(xl) {@include column-styles($fraction, $fraction-result, $gutter, $important, $denominator, $nominator);}
     }
     @if ($stacking == xxl) {
-      @include respond-above(xxl) {@include grid-logic();}
+      @include respond-above(xxl) {@include column-styles($fraction, $fraction-result, $gutter, $important, $denominator, $nominator);}
     }
   }
   // If no stacking...
   @else {
-    // ...add grid-logic without responsive mixins
-    @include grid-logic();
+    // ...add column-styles without responsive mixins
+    @include column-styles($fraction, $fraction-result, $gutter, $important, $denominator, $nominator);
   }
   
 
   /* =======================================*/
-  /*
-  /* GRID COLUMN - DEBUG
-  /*
+  /* DEBUG GRID FUNCTION
   /* =======================================*/
   // If Debug...
   @if ($debug-grid == true) {
