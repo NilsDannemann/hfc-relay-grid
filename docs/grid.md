@@ -22,7 +22,6 @@ Here's the most basic usage pattern.
 
 ```sass
 .parent {
-	@include container(); //optional
 	@include grid();
 
 	.children {
@@ -45,6 +44,21 @@ That's it.
 <br>
 # The Guide
 So let's begin.
+
+
+<br>
+##Step 1 - Activate the Grid
+This activated the grid and gives you some layout-options via flexbox.<br> 
+
+```sass
+.parent {
+	@include grid();  	 			//basic usage
+	@include grid($align:stretch);  //equal height columns
+	@include grid($justify:end);    //align columns to the right
+}
+```
+
+
 
 <br>
 ##Step 1 - Defining Columns
