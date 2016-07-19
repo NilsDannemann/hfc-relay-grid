@@ -108,7 +108,7 @@ Currently you can add one behavior: "stacking".
 
 **Stacking** <br>
 This causes the columns to stack on mobile (common pattern).<br>
-The default breakpoint for this to happen is "l". But you can just pass a different breakpoint to change this to your liking.
+The default breakpoint for this to happen is "l". But you can just pass a different breakpoint to change this.
 
 ```sass
 @include column('1/6', $gutter: true, $stacking: true); //stack below l
