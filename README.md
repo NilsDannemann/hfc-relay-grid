@@ -56,7 +56,7 @@ The Snippets for Sublime Text are optional but make the workflow much faster. <b
 
 
 <br><hr>
-## Usage
+## Where to go from there?
 
 - [Container](docs/container.md)
 - [The Grid](docs/grid.md)
