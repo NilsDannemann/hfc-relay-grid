@@ -101,12 +101,13 @@ You can also specify your own gutters like so:
 
 
 <br>
-##Step 3 - Adding Gutters
+##Step 3 - Adding Behavior
 
-By default a column has no special behavior.
+By default a column has no special behavior.<br>
 Currently you can add one behavior: "stacking".
 
-**Stacking:** This causes the columns to stack on mobile (common pattern).
+**Stacking** <br>
+This causes the columns to stack on mobile (common pattern).<br>
 The default breakpoint for this to happen is "l". But you can just pass a different breakpoint to change this to your liking.
 
 ```sass
@@ -116,7 +117,7 @@ The default breakpoint for this to happen is "l". But you can just pass a differ
 
 
 
-<br><hr>
+<br>
 ##Optional - Using !important
 
 Simply pass a $important variable.
