@@ -184,7 +184,7 @@
     // ...and display passed mixin parameters.
     &::before{
       @if ($cycle) {
-        content: 'column(\'#{$fraction}, $cycle: #{$cycle}\')';
+        content: 'column(\'#{$fraction}\', $cycle: #{$cycle})';
       }
       @else if ($stacking) {
         content: 'column(\'#{$fraction}\', $stacking: #{$stacking})';
