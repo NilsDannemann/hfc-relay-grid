@@ -1,6 +1,7 @@
 #Welcome to the Guide
 This Guide will show you the features & usage of this grid step by step.
 
+##Introduction
 Just starting out? <br>
 Then just "code along" with the examples.
 
@@ -13,11 +14,6 @@ Then just "code along" with the examples.
 [Open Playground](http://codepen.io/NilsDannemann/pen/MKZQxe?editors=1100)
 
 Both Options are fine.
-
-
-<br>
-# The Guide
-So let's begin.
 
 
 <br>
