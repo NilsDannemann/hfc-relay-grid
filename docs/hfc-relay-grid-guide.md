@@ -186,24 +186,34 @@ To go responsive you can use the [responsive mixins](https://github.com/NilsDann
 <br>
 ##Step 5 - Add Behavior (optional)
 
+Behaviors are basically a **shorthand for the responsive mixins**.
+
 By default a column has no special behavior.<br>
-Currently you can add one behavior: "stacking"
+Currently there is only one behavior: "stacking"
 
 **Stacking** <br>
 This causes the columns to stack on mobile (common pattern).<br>
-The default breakpoint for this to happen is "l". But you can just pass a different breakpoint to change this.
+The default breakpoint for this to happen is "l". <br>
+But you can just pass a different breakpoint to change this.
 
 ```sass
-@include column('1/4', $gutter: true, $stacking: true); //stack below l
-@include column('1/4', $gutter: 10px, $stacking: s); 	//stack below s
+.parent {
+	@include grid();
+
+	.children {
+		@include column('1/4', $gutter: true, $stacking: true); //stack below l
+		@include column('1/4', $gutter: 10px, $stacking: s); 	//stack below s
+	}
+}
 ```
 
 
 
 <br>
-##Optional - Using !important
+##Other - !important
 
-Simply pass a $important variable.
+Simply pass a $important variable. <br>
+This adds !important to the width of the column.
 
 ```sass
 @include column('1/4', $important: true); 	// adds !important
