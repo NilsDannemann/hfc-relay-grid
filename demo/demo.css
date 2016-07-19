@@ -37,6 +37,11 @@ html {
 /* =======================================*/
 /* =======================================*/
 /*
+/* CONTAINER
+/*
+/* =======================================*/
+/* =======================================*/
+/*
 /* GRID QUERIES
 /* 
 /* =======================================*/
@@ -238,8 +243,8 @@ body:after {
 }
 
 body {
-  max-width: 90%;
-  margin: 20px auto;
+  max-width: 1275px;
+  margin: 0 auto;
   font-family: 'OpenSansRegular', sans-serif;
   color: #333;
 }
@@ -954,7 +959,7 @@ div {
 }
 
 .multiline-and-uneven-with-gutter.small::before {
-  content: "column('1/4, $cycle: 3')";
+  content: "column('1/4', $cycle: 3)";
   display: block;
   width: 10000px;
   margin-right: -10000px;
@@ -999,7 +1004,7 @@ div {
 }
 
 .multiline-and-uneven-with-gutter.big::before {
-  content: "column('2/4, $cycle: 3')";
+  content: "column('2/4', $cycle: 3)";
   display: block;
   width: 10000px;
   margin-right: -10000px;

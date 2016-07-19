@@ -7,7 +7,7 @@ Then just "code along" with the examples.
 **For this you have two options:**
 
 1. Either install the grid locally<br>
-[Installation Guide](http://codepen.io/NilsDannemann/pen/MKZQxe?editors=1100)
+[Installation Guide](https://github.com/NilsDannemann/hfc-relay-grid)
 
 1. Or use the Playground on Codepen<br>
 [Open Playground](http://codepen.io/NilsDannemann/pen/MKZQxe?editors=1100)
