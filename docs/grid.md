@@ -1,4 +1,4 @@
-#About this Guide
+#Welcome to the Guide
 This Guide will show you the features & usage of this grid step by step.
 
 Just starting out? <br>
@@ -16,7 +16,7 @@ Both Options are fine.
 
 
 <br>
-#A quick Example
+###A quick Example
 Before we begin:<br> 
 Here's the most basic usage pattern.
 
@@ -35,7 +35,7 @@ The pattern is always the same:
 1. Activate the grid on the parent. <br>
 ```@include grid();```
 
-1. Define columns for the children. <br>
+1. Define columns on the children. <br>
 ```@include column('1/4');```
 
 That's it.
