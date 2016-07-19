@@ -44,10 +44,10 @@ Before we begin, here's the most basic usage pattern.
 
 The steps are always the same:
 
-1. Activate the grid on the parent container.
+1. Activate the grid on the parent container. <br>
 ```@include grid();```
 
-1. Define columns for the children.
+1. Define columns for the children. <br>
 ```@include column('1/4');```
 
 That's it.
