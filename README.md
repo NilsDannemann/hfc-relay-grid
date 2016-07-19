@@ -1,6 +1,5 @@
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/relay_logo.jpg)
 
-# HFC Relay Grid (SCSS)
 The grid is a **fraction-based** grid system and uses flexible sass-mixins instead of fixed classes.<br>
 
 This approach has the following advantages over conventional grids:<br>
@@ -55,7 +54,7 @@ The Snippets for Sublime Text are optional but make the workflow much faster. <b
 **Usage:** Just type `grid` or `column` and hit `TAB` to place your include.
 
 
-<br><hr>
+<br>
 #Where to go from there?
 
 - [Container](docs/container.md)
