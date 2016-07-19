@@ -13,11 +13,18 @@ This approach has the following advantages over conventional grids:<br>
 <br><hr>
 ## Installation
 
-####1. Install<br>
-Install the npm package from your console.
+####Install via npm<br>
+Install the npm package.
 ```sass
 npm install hfc-relay-grid --save-dev
 ```
+
+####Install via bower<br>
+Install the bower package.
+```sass
+bower install hfc-relay-grid --save-dev
+```
+
 
 ####2. Create config<br> 
 Create a `_hfc-relay-config.scss` with [this content](src/_hfc-relay-grid-config.scss) (but remove all the `!default` statements) <br>
