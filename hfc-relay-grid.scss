@@ -9,10 +9,10 @@
 @import "src/hfc-relay-grid-config";
 
 //=====================================*/
-// IMPORT GRID MIXINS
+// IMPORT PARTIALS
 //=====================================*/
-@import 'src/mixins/hfc-relay-grid-functions';
-@import 'src/mixins/hfc-relay-grid';
-@import 'src/mixins/hfc-relay-grid-column';
-@import 'src/mixins/hfc-relay-grid-container';
-@import 'src/mixins/hfc-relay-grid-queries';
+@import 'src/partials/hfc-relay-grid-functions';
+@import 'src/partials/hfc-relay-grid';
+@import 'src/partials/hfc-relay-grid-column';
+@import 'src/partials/hfc-relay-grid-container';
+@import 'src/partials/hfc-relay-grid-queries';
