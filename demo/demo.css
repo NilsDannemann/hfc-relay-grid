@@ -4,6 +4,8 @@
 /* CORE CONFIG
 /*
 /* =======================================*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,600,400);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300);
 /* =======================================*/
 /*
 /* CORE BASE - RESET
@@ -244,13 +246,13 @@ body:after {
 }
 
 body {
-  max-width: 1275px;
-  margin: 0 auto;
-  font-family: 'OpenSansRegular', sans-serif;
-  color: #333;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  color: #555;
 }
 body p {
-  color: #666;
+  color: #555;
   font-size: 14px;
 }
 body strong {
@@ -258,20 +260,24 @@ body strong {
 }
 body hr {
   border: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e1e1e1;
   margin-top: 20px;
 }
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Raleway", sans-serif;
+  color: #333;
+}
 body h3 {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #e1e1e1;
   padding-top: 20px;
   margin-top: 80px;
 }
-
-div {
-  padding: 15px;
-  background: #f1f1f1;
-  color: #333;
-  font-size: 12px;
+body div {
+  padding: 20px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.085) inset;
+  background: #efefef;
+  font-size: 14px;
+  color: #555;
   overflow: hidden;
 }
 

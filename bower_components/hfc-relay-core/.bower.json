@@ -20,14 +20,13 @@
     "test",
     "tests"
   ],
-  "_release": "c8577bcc4e",
+  "_release": "55ddf13a65",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "c8577bcc4e2a619077d526d5e3c751bb5f5cb473"
+    "commit": "55ddf13a65c6e9358636a55167d1b93770645d74"
   },
   "_source": "https://github.com/NilsDannemann/hfc-relay-core.git",
   "_target": "*",
-  "_originalSource": "hfc-relay-core",
-  "_direct": true
+  "_originalSource": "hfc-relay-core"
 }
