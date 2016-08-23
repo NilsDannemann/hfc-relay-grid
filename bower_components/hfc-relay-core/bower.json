@@ -1,7 +1,7 @@
 {
-  "name": "hfc-relay-grid",
-  "version": "1.0.1",
-  "description": "HFC Relay Grid (SCSS)",
+  "name": "hfc-relay-core",
+  "version": "0.0.2",
+  "description": "HFC Relay Core (SCSS)",
   "main": "index.js",
   "authors": [
     "Nils Dannemann <ndannemann@gmail.com> (http://www.hfci.de)"
@@ -13,15 +13,12 @@
     "sass",
     "hfc-relay"
   ],
-  "homepage": "https://github.com/NilsDannemann/hfc-relay-grid",
+  "homepage": "https://github.com/NilsDannemann/hfc-relay-core",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ],
-  "devDependencies": {
-    "hfc-relay-core": "*"
-  }
+  ]
 }
