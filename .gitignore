@@ -1,2 +1,4 @@
 prepros.cfg
 config.codekit
+bower_components
+node_modules

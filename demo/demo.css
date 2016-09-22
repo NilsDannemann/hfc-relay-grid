@@ -861,9 +861,6 @@ body div {
 .fraction:nth-child(3n) {
   margin-right: 0;
 }
-.fraction:nth-child(3n + 1) {
-  clear: both;
-}
 .fraction::before {
   content: "column('1/3')" !important;
   display: block;
@@ -896,9 +893,6 @@ body div {
 }
 .fraction-with-gutter:nth-child(3n) {
   margin-right: 0;
-}
-.fraction-with-gutter:nth-child(3n + 1) {
-  clear: both;
 }
 .fraction-with-gutter::before {
   content: "column('1/3')" !important;
@@ -1229,9 +1223,6 @@ body div {
 .multiline-with-gutter:nth-child(3n) {
   margin-right: 0;
 }
-.multiline-with-gutter:nth-child(3n + 1) {
-  clear: both;
-}
 .multiline-with-gutter::before {
   content: "column('1/3')" !important;
   display: block;
@@ -1264,9 +1255,6 @@ body div {
 }
 .multiline-and-nested:nth-child(3n) {
   margin-right: 0;
-}
-.multiline-and-nested:nth-child(3n + 1) {
-  clear: both;
 }
 .multiline-and-nested::before {
   content: "column('1/3')" !important;
@@ -1301,9 +1289,6 @@ body div {
 .multiline-and-uneven.small:nth-child(4n) {
   margin-right: 0;
 }
-.multiline-and-uneven.small:nth-child(4n + 1) {
-  clear: both;
-}
 .multiline-and-uneven.small::before {
   content: "column('1/4')" !important;
   display: block;
@@ -1336,9 +1321,6 @@ body div {
 }
 .multiline-and-uneven.big:nth-child(4n) {
   margin-right: 0;
-}
-.multiline-and-uneven.big:nth-child(4n + 1) {
-  clear: both;
 }
 .multiline-and-uneven.big::before {
   content: "column('2/4')" !important;
@@ -1373,9 +1355,6 @@ body div {
 .multiline-and-uneven-with-gutter.small:nth-child(3n) {
   margin-right: 0;
 }
-.multiline-and-uneven-with-gutter.small:nth-child(3n + 1) {
-  clear: both;
-}
 .multiline-and-uneven-with-gutter.small::before {
   content: "column('1/4', $cycle: 3)" !important;
   display: block;
@@ -1408,9 +1387,6 @@ body div {
 }
 .multiline-and-uneven-with-gutter.big:nth-child(3n) {
   margin-right: 0;
-}
-.multiline-and-uneven-with-gutter.big:nth-child(3n + 1) {
-  clear: both;
 }
 .multiline-and-uneven-with-gutter.big::before {
   content: "column('2/4', $cycle: 3)" !important;
@@ -1450,9 +1426,6 @@ body div {
   .behavior:nth-child(4n) {
     margin-right: 0;
   }
-  .behavior:nth-child(4n + 1) {
-    clear: both;
-  }
 }
 .behavior::before {
   content: "column('1/4', $stacking: xl)" !important;
@@ -1491,9 +1464,6 @@ body div {
   }
   .behavior-with-gutter:nth-child(4n) {
     margin-right: 0;
-  }
-  .behavior-with-gutter:nth-child(4n + 1) {
-    clear: both;
   }
 }
 .behavior-with-gutter::before {

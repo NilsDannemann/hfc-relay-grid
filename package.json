@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nils Dannemann <ndannemann@gmail.com> (http://www.hfci.de)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "hfc-relay-core": "*"
+  }
 }

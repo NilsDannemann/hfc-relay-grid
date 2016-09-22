@@ -68,9 +68,9 @@
     &:nth-child(#{$denominator}n) {
       margin-right: 0;
     }
-    &:nth-child(#{$denominator}n + 1) {
-      clear: both;
-    }
+    // &:nth-child(#{$denominator}n + 1) {
+    //   clear: both;
+    // }
   }
 }
 
