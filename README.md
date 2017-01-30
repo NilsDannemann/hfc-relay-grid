@@ -1,6 +1,6 @@
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/relay_logo.jpg)
 
-A grid system and uses flexible sass-mixins instead of fixed classes.<br>
+A grid system that uses flexible sass-mixins instead of fixed classes.<br>
 
 
 <br>
@@ -11,19 +11,14 @@ How to get up and running.
 <br>
 ##1. Install Package<br>
 
-Option 1: Install via npm
-```sass
-npm install hfc-relay-grid --save-dev
-```
-
-Option 2: Install via bower
+Install via bower
 ```sass
 bower install hfc-relay-grid --save-dev
 ```
 
 <br>
 ##2. Create config<br> 
-Create a `_hfc-relay-grid-config.scss` with [this content](src/_hfc-relay-grid-config.scss) (but remove all the `!default` statements) <br>
+Create a `_hfc-relay-grid-config.scss` with [this content](https://github.com/NilsDannemann/hfc-relay-core/blob/master/src/_hfc-relay-core-config.scss) (but remove all the `!default` statements) <br>
 
 In there you can now:
 - safely override any defaults
@@ -36,7 +31,7 @@ Import both Files in your sass in this order.
 ```sass
 // HFC Relay
 @import 'path/to/your/hfc-relay-grid-config.scss';
-@import 'node_modules/hfc-relay/hfc-relay-grid.scss';
+@import 'bower_components/hfc-relay/hfc-relay-grid.scss';
 
 // Your other imports below.
 ```
