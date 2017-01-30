@@ -47,8 +47,18 @@ The Snippets for Sublime Text are optional but make the workflow much faster. <b
 
 
 <br>
-#Where to go from there?
+#Usage
 
-- [Container](docs/container.md)
+
+<br>
+###1. Using the Grid<br> 
 - [The Grid](docs/hfc-relay-grid-guide.md)
+
+<br>
+###2. Using the Mediaqueries<br> 
 - [Mediaqueries](docs/hfc-relay-grid-queries.md)
+
+<br>
+###1. Using the Container<br> 
+- [Container](docs/container.md)
+
