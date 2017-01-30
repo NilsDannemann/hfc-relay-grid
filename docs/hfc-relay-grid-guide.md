@@ -1,4 +1,7 @@
-#Welcome to the Guide
+![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/relay_logo.jpg)
+
+<br>
+#The Grid
 This Guide will show you the features & usage of this grid step by step.
 
 <br>

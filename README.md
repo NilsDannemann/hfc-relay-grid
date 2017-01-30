@@ -52,7 +52,7 @@ The Snippets for Sublime Text are optional but make the workflow much faster. <b
 
 <br>
 ###1. Using the Grid<br> 
-This Guide will show you the features & usage of this grid step by step.
+Features & Usage of this grid-system step by step.
 - [The Grid](docs/hfc-relay-grid-guide.md)
 
 <br>
