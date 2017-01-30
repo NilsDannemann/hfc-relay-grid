@@ -19,8 +19,8 @@ This activates the grid and gives you some layout-options via flexbox.<br>
 ```
 
 ####Options
-Equal Column Height - Add ```@include grid($align:stretch);```<br>
-RTL Column Layout - Add ```@include grid($justify:end);```
+```$align``` 	- Equal Column Height - Usage: ```@include grid($align:stretch);```<br>
+```$justify```	- ERTL Column Layout - Usage: ```@include grid($justify:end);```
 
 
 <br>
