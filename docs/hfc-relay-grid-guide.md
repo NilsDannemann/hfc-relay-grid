@@ -2,7 +2,7 @@
 This Guide will show you the features & usage of this grid step by step.
 
 <br>
-###Step 1 - Activate Grid
+##Step 1 - Activate Grid
 This activates the grid and gives you some layout-options via flexbox.<br> 
 
 ```sass
@@ -21,7 +21,7 @@ RTL Column Layout - Add ```@include grid($justify:end);```
 
 
 <br>
-###Step 2 - Define Columns
+##Step 2 - Define Columns
 You have quite a few options to define the widths of your columns.
 
 ####Option 1: Use Fractions 
