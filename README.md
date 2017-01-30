@@ -9,15 +9,15 @@ How to get up and running.
 
 
 <br>
-##1. Install Package<br>
+###1. Install Package<br>
 
-Install via bower
+Install via Bower
 ```sass
 bower install hfc-relay-grid --save-dev
 ```
 
 <br>
-##2. Create config<br> 
+###2. Create config<br> 
 Create a `_hfc-relay-grid-config.scss` with [this content](https://github.com/NilsDannemann/hfc-relay-core/blob/master/src/_hfc-relay-core-config.scss) (but remove all the `!default` statements) <br>
 
 In there you can now:
@@ -26,7 +26,7 @@ In there you can now:
 - toggle features like `debug-grid`
 
 <br>
-##3. Import Files<br> 
+###3. Import Files<br> 
 Import both Files in your sass in this order.
 ```sass
 // HFC Relay
@@ -40,7 +40,7 @@ That's it. <br>
 Happy coding.
 
 <br>
-##4. Use Snippets (Optional)
+###4. Use Snippets (Optional)
 The Snippets for Sublime Text are optional but make the workflow much faster. <br>
 **Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
 **Usage:** Just type `grid` or `column` and hit `TAB` to place your include.
